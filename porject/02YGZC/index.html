@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>允公资产</title>
+	<link rel="stylesheet" href="guide/css/style.css">
+	<link href="yungong.ico" rel="shortcut icon">
+	<script type="text/javascript" src="guide/js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<a href="home/home.html" class="home-btn"></a><!-- 进入首页 -->
+	</div>
+
+	<!-- 协议框 -->
+	<div class="shadow block" id="shadow"></div>
+
+	<div class="mainwrap block" id="main">
+		<!-- top -->
+		<div class="main-top">
+				<!-- top-left -->
+			<div class="top-text">
+				<p class="p1">尊敬的允公用户：</p>
+				<p class="p2">允公资产恪守《私募投资基金监督管理暂行办法》规定，即日起注册用户才能登录网站查看，特此公告！</p>
+				<p class="p3">允公资产</p>
+				<p class="p4">2016年06月06日</p>
+			</div>
+				<!-- top-right -->
+				<!-- 注册与登录 -->
+			<form action="" method="post" name="form">
+				<div class="chart">
+					<!-- 登录 -->
+					<div class="login" id="loginbox">
+						<p class="p1">账号</p>
+						<!-- 姓名/手机号 -->
+						<p class="p2">
+							<input type="text" name="text" placeholder="姓名/手机号" id="username">
+						</p>
+
+						<p class="p3">密码</p>
+						<!-- 密码 -->
+						<p class="p4">
+							<input type="password" name="password" placeholder="请输入6位数以上密码" id="password">
+						</p>
+
+						<input type="button" class="button" value="立即登录" id="login" disabled="disabled">
+						<script>
+							//判断是否敲击了Enter键  
+							$(document).keyup(function(event){  
+							    if(event.keyCode ==13){  
+							      $("#login").trigger("click");  
+							    }  
+							});
+						</script>
+						
+						<p class="reg_now"><a href="register/changequestion/changequestion.html">立即注册</a></p>
+						<p class="fot_code"><a href="findpwbyphone/findpwbyphone.html">忘记密码?</a></p>
+						<!-- remind -->
+						<div id="remind1"></div>
+						<div id="remind2"></div>
+					</div>
+						
+				</div>
+			</form>
+			
+		</div>
+
+		<!-- bottom -->
+		<div class="main-bottom">
+			<div class="content">
+				<img src="guide/images/logo2.png" alt="" class="contentimg">
+				<p class="p1">根据《私募投资基金监督管理暂行办法》第四章第十四条规定：“ 私募基金管理人、私募基金销售机构不得向合格投资者之外的单位和个人募集资金，不得通过报刊、电台、电视、互联网等公众传播媒体或者讲座、报告会、分析会和布告、传单、手机短信、微信、博客和电子邮件等方式，向不特定对象宣传推介。”</p>
+				<p class="p2">允公资产谨遵《私募投资基金监督管理暂行办法》之规定，只向特定的合格投资者宣传推介相关私募投资基金产品。</p>
+				<p class="p3">阁下如有意进行私募投资基金投资且满足《私募投资基金监督管理暂行办法》关于“合规投资者”标准之规定，即具备相应风险识别能力和风险承担能力。请阁下详细阅读本提示，并注册成为允公资产特定的合规投资者，方可获得允公资产私募投资基金产品宣传推介服务。</p>
+				<p class="p4">私募基金的合格投资者是指具备相应风险识别能力和风险承担能力，投资于单只私募基金的金额不低于100 万元且符合下列相关标准的单位和个人：</p>
+				<p class="p5">（一）净资产不低于1000 万元的单位；</p>
+				<p class="p6">（二）金融资产不低于300 万元或者最近三年个人年均收入不低于50 万元的个人。</p>
+				<p class="p7">前款所称金融资产包括银行存款、股票、债券、基金份额、资产管理计划、银行理财产品、信托计划、保险产品、期货权益等。</p>
+				
+				<div class="confirm2">
+					<label><input type="checkbox" name="checkbox" id="yes" ><span>我已经认定并接受此认定书</span></label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- 勾选条款才能登录 -->
+	<script>
+		var oYes=document.getElementById("yes");
+		var oLogin = document.getElementById("login");
+
+		oYes.onclick=function(){
+		    if(oYes.checked==true){
+		        /*登录*/
+		        oLogin.disabled=false;
+		        oLogin.style.backgroundColor="#00a6ba";
+		    }
+		    else{
+		        /*登录*/
+		        oLogin.disabled=true;
+		        oLogin.style.backgroundColor="gray";
+		    }
+		};
+	</script>
+
+
+<!-- 登录 -->
+	<!-- 检验表单是否输入 -->
+	<script>
+		var oLogin = document.getElementById("login");
+		/*立即登录提示文字*/
+		var oUsername = document.getElementById("username");
+		var oRemind1 = document.getElementById("remind1");
+		var oPassword = document.getElementById("password");
+		var oRemind2 = document.getElementById("remind2");
+		/*遮罩*/
+		var oShadow = document.getElementById("shadow");
+		var oMain = document.getElementById("main");
+
+		oLogin.onclick = function(){
+				if (oUsername.value == "")
+				{
+					oRemind1.innerHTML = "请输入姓名或手机号码！";
+				}
+				else
+				{
+					oRemind1.innerHTML = "";
+				}
+
+				if (oPassword.value == "")
+				{
+					oRemind2.innerHTML = "请输入密码！";
+				}
+				else
+				{
+					oRemind2.innerHTML = "";
+				}
+				/*先判断是否为空，在清除遮罩*/
+				if(oUsername.value !== "" && oPassword.value !== ""){
+					oShadow.style.display = "none";
+					oMain.style.display = "none";
+			};
+		};
+	</script>
+
+	
+</body>
+</html>

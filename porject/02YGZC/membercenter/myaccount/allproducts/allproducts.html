@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的账户</title>
+	<link rel="stylesheet" href="css/allproducts.css">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/laydate.js"></script>
+	<script src="js/highstock.js"></script>
+	<script src="exporting.js"></script>
+
+</head>
+<body>
+	
+	<!-- head -->
+	<div class="head">
+		<div class="head-wrap">
+			<div class="logo">
+				<a href="../../../home/home.html"><img src="images/logo.png" alt="允公资产"></a>
+			</div>
+
+			<a href="../../../home/home.html" class="home_icon"></a>
+
+			<!-- 登录过后图标 -->
+			<div class="person" id="person">
+				<div class="person-logo">陆军</div>
+				<div class="person-list" id="personList" style="display:none">
+					<a href="javascript:;">我的账户</a>
+					<a href="../../useraccount/userinfo/userinfo.html">账号管理</a>
+					<a href="../../../login/login.html">退出账号</a>
+				</div>
+			</div>
+
+			<script>
+				var oPerson = document.getElementById("person");
+				var oPersonList = document.getElementById("personList");
+				
+				oPerson.onmouseover = function(){
+					oPersonList.style.display = "block";
+				};
+
+				oPerson.onmouseout = function(){
+					oPersonList.style.display = "none";
+				};
+			</script>
+		</div>
+	</div><!-- head end -->
+
+
+	
+
+	<!-- section1 -->
+	<div class="section1">
+		<div class="section1-wrap">
+			<!-- section1-right -->
+			<div class="section1-right">	
+				<div class="windup">
+					<span class="title">我的资产</span>
+										
+					<!-- 我的账户线 -->
+					<p class="line-bg" style="margin:10px 0 30px 0">
+						<span class="line1" style="display:inline-block;width:140px;height:3px;background:#abaaaa;"></span><span class="line2" style="display:inline-block;width:1060px;height:3px;background:#dbdbdb;"></span>
+					</p>
+				</div>
+
+				<div class="useraccount">
+					<p class="p1">尊敬的陆军，您好!</p>
+					<p class="p2">我的资产：<span class="number">400</span>万元</p>
+				</div>	
+						
+				<!-- 持有产品 -->
+				<div class="windup">
+					<span class="title">持有产品</span>
+					<div class="select_wrap">
+						<span class="select_head">全部</span>
+						<div class="select_con" id="select_con">
+							<a href="../product01/product01.html">允公慧享精选6号</a>
+							<a href="../product02/product02.html">允公鑫享8号</a>
+						</div>
+					</div>
+										
+					<!-- 持有产品线 -->
+					<p class="line-bg" style="margin:10px 0 30px 0">
+						<span class="line1" style="display:inline-block;width:140px;height:3px;background:#abaaaa;"></span><span class="line2" style="display:inline-block;width:1060px;height:3px;background:#dbdbdb;"></span>
+					</p>
+				</div>
+
+				<!-- 持有产品-顶部标题 -->
+				<div class="topnav">
+					<h4>
+						<span class="s1">序号</span>
+						<span class="s2">产品名称</span>
+						<span class="s3">单位净值</span>
+						<span class="s4">累计净值</span>
+						<span class="s5">净值日期</span>
+						<span class="s6">份额余额</span>
+					</h4>
+				</div>
+				
+				<!-- 持有产品-具体产品 -->
+				<div id="firstpane" class="menu_list">
+			<!-- 1 -->
+					<p class="menu_head current" id="menu_head_1">
+						<span class="part0" id="part0_1"></span><!-- 下拉小三角 -->
+						<span class="part1">01</span>
+						<span class="part2">允公慧享精选6号</span>
+						<span class="part3">0.9567</span>
+						<span class="part4">0.9567</span>
+						<span class="part5">2016-12-30</span>
+						<span class="part6">***</span>						
+					</p>
+								
+					<div style="display:none" class="menu_body">
+						<div id="netline1">				
+						<!-- 按钮 -->
+							<div class="netline-btn">
+								
+								<a href="javascript:;" id="netsearch-btn1" class="active" onclick="oNetsearchcon1show()">历史净值查询</a><a href="javascript:;" id="info-btn1"  onclick="oInfocon1show()">信息披露</a><a href="javascript:;" id="confirm-btn1"  onclick="oConfirmcon1show()">份额电子确认书</a>
+							</div>
+								
+						<!-- 内容 -->
+							<!-- 净值查询内容 -->
+							<div class="netsearch-con" id="netsearch-con1" style="display:block">
+								<!-- 日历 -->
+								<div class="box1">
+									<div class="demo1-1" style="float:left">
+										<input class="laydate-icon" id="demo1-1" value="" placeholder="开始日期" style="text-indent:1em" > 
+									</div>
+								</div>
+								<div class="box2">
+									<div class="demo1-2" style="float:left; margin-left:27px">
+										<input class="laydate-icon" id="demo1-2" value="" placeholder="结束日期" style="text-indent:1em"> 
+									</div>
+								</div>
+								<!-- 查询 -->
+								<button class="search">查询</button>
+
+								<!-- 列表-折线图-按钮 -->	
+								<a href="javascript:;" class="linepic active2" id="line1" >曲线图</a>
+								<span class="line">|</span>
+								<a href="javascript:;" class="list " id="list1" >列表</a>
+
+									<!-- 折线图内容 -->
+									<div class="line-content" id="linecon1" style="display:block; width:1100px;margin:0 auto; margin-top:50px;">
+										<div id="container1" style="width:1100px;height:250px"></div>
+									</div>
+
+									<!-- 列表内容 -->
+									<div class="list-content" id="listcon1" style="display:none;">
+										<p><span>日期</span><span>单位净值</span><span>单位净值</span></p>
+										<ul>
+											<li><span>2016-09-30</span><span>0.9993</span><span>0.9993</span></li>
+											<li><span>2016-12-30</span><span>0.9567</span><span>0.9567</span></li>
+												
+										</ul>
+									</div>
+							</div>
+
+							<!-- 信息披露内容 -->
+							<div id="info-con1" class="info-con" style="display:none">
+								<ul class="list-pl">
+									<li>
+										<span>允公慧享精选6号私募投资基金2016年第3季度报告-投资者披露</span>
+										
+										<a href="pdf/6_2016_3.pdf" class="download"  download="6_2016_3"></a>
+										<a href="pdf/6_2016_3.pdf" target="_blank" class="watch"></a>
+									</li>
+									<li>
+										<span>允公慧享精选6号私募投资基金2016年第4季度报告-投资者披露</span>
+										
+										<a href="pdf/6_2016_4.pdf" class="download" download="6_2016_4"></a>
+										<a href="pdf/6_2016_4.pdf" target="_blank" class="watch"></a>
+									</li>
+								</ul>
+								
+							</div>
+								
+							<!-- 份额电子确认书内容 -->
+							<div id="confirm-con1" class="confirm-con" style="display:none">
+								<div class="qrs_main">
+								<!--startprint1-->
+									<div class="qrs_wrap">
+										<p class="qrs_mailcode">邮编:<span>***</span></p>
+										<p class="qrs_address">地址:<span>***</span></p>
+										
+										<h2>基金交易确认书</h2>
+
+										
+										
+										<ul class="qrs_table2">
+											<li>
+												<span class="atleft">投资者姓名/名称:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">申请日期:<span>***</span></span>
+												<span class="atright">确认日期:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">交易账号:<span>***</span></span>
+												<span class="atright">基金账号:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">基金名称:<span>***</span></span>
+												<span class="atright">基金代码:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">申请金额:<span>***</span></span>
+												<span class="atright">申请份额:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">确认金额:<span>***</span></span>
+												<span class="atright">确认份额:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">手续费:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">备注:<span>***</span></span>
+
+											</li>
+										</ul>
+
+										<div class="qrs_notice">
+											<h4>重要提示:</h4>
+											<p notice_1>*   为了保障您/贵司的合法权益，请确认您/贵司的账户信息完整无误，以便我们为您/贵司提供更完善的服务。如您/贵司发现本确认书所载信息有任何错漏，请立即与我公司直销柜台联系。</p>
+											<p notice_2>*	如果您/贵司需要补充或修改账号信息资料，请及时通过我公司直销柜台办理变更手续。</p>
+											<p notice_3>*	您/贵司的基金交易确认是您/贵司的重要信息，为了您/贵司的账户安全，请妥善保存本确认书，如因您/贵司保管不当而导致有关信息失密、遗失或窃取等风险由您/贵司自行承担。</p>
+										</div>
+
+										<div class="qrs_footer">
+											<h5>上海允公资产管理有限公司</h5>
+											<li>
+												<span class="con_address">公司地址：上海市浦东新区银城中路501号上海中心大厦3107室 </span>
+												<span class="con_mailcode">邮政编码：200120</span>
+												<span class="con_hotline">客服热线：(021)58567018</span>
+												<span class="con_fax">直销传真：(021)58569722</span>
+											</li>
+
+										</div>
+										
+										<div class="seal"></div><!-- 印章 -->									
+									</div>
+									<!--endprint1-->
+									<div class="print_btn"><a href="" onclick="preview(1)">打印</a></div>
+									<div class="download_btn"><a href="javascript:;">下载</a></div>
+								</div>
+								
+							</div>				
+						</div>
+					</div>	
+
+					
+					
+			<!-- 2 -->
+					<!-- 标题 -->
+					<p class="menu_head" id="menu_head_2">
+						<span class="part0" id="part0_2"></span><!-- 下拉小三角 -->
+						<span class="part1">02</span>
+						<span class="part2">允公鑫享8号</span>
+						<span class="part3">0.9770</span>
+						<span class="part4">0.9770</span>
+						<span class="part5">2016-12-30</span>
+						<span class="part6">***</span>
+					</p>
+
+												
+					<div style="display:none" class="menu_body">
+						<div id="netline2">				
+						<!-- 按钮 -->
+							<div class="netline-btn">
+								
+								<a href="javascript:;" id="netsearch-btn2" class="active" onclick="oNetsearchcon2show()">历史净值查询</a><a href="javascript:;" id="info-btn2"  onclick="oInfocon2show()">信息披露</a><a href="javascript:;" id="confirm-btn2"  onclick="oConfirmcon2show()">份额电子确认书</a>
+							</div>
+								
+						<!-- 内容 -->
+							<!-- 净值查询内容 -->
+							<div class="netsearch-con" id="netsearch-con2" style="display:block">
+								<!-- 日历 -->
+								<div class="box1">
+									<div class="demo1-1" style="float:left">
+										<input class="laydate-icon" id="demo2-1" value="" placeholder="开始日期" style="text-indent:1em" > 
+									</div>
+								</div>
+								<div class="box2">
+									<div class="demo1-2" style="float:left; margin-left:27px">
+										<input class="laydate-icon" id="demo2-2" value="" placeholder="结束日期" style="text-indent:1em"> 
+									</div>
+								</div>
+								<!-- 查询按钮 -->
+								<button class="search">查询</button>
+
+								<!-- 列表-折线图-按钮 -->	
+								<a href="javascript:;" class="linepic active2" id="line2">曲线图</a>
+								<span class="line">|</span>
+								<a href="javascript:;" class="list " id="list2">列表</a>
+
+								<!-- 折线图内容 -->
+								<div class="line-content" id="linecon2" style="display:block; width:1100px;margin:0 auto; margin-top:50px;">
+									<div id="container2" style="width:1100px;height:250px"></div>
+								</div>					
+								<!-- 列表内容 -->
+								<div class="list-content" id="listcon2" style="display:none;">
+									<p><span>日期</span><span>单位净值</span><span>单位净值</span></p>
+									<ul>
+										<li><span>2016-12-30</span><span>0.9770</span><span>0.9770</span></li>
+											
+									</ul>
+								</div>
+							</div>
+
+							<!-- 信息披露内容 -->
+							<div id="info-con2" class="info-con" style="display:none">
+								<ul class="list-pl">
+									<li>
+										<span>允公鑫享8号私募投资基金2016年第4季度报告-投资者披露</span>				
+										<a href="pdf/8_2016_4.pdf" class="download" download="8_2016_4"></a>
+										<a href="pdf/8_2016_4.pdf" target="_blank" class="watch"></a>
+									</li>
+								</ul>
+								
+							</div>
+								
+							<!-- 份额电子确认书内容 -->
+							<div id="confirm-con2" class="confirm-con" style="display:none">
+								
+								<div class="qrs_main">
+								<!--startprint2-->
+									<div class="qrs_wrap">
+										<p class="qrs_mailcode">邮编:<span>***</span></p>
+										<p class="qrs_address">地址:<span>***</span></p>
+										
+										<h2>基金交易确认书</h2>
+																
+										<ul class="qrs_table2">
+											<li>
+												<span class="atleft">投资者姓名/名称:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">申请日期:<span>***</span></span>
+												<span class="atright">确认日期:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">交易账号:<span>***</span></span>
+												<span class="atright">基金账号:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">基金名称:<span>***</span></span>
+												<span class="atright">基金代码:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">申请金额:<span>***</span></span>
+												<span class="atright">申请份额:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">确认金额:<span>***</span></span>
+												<span class="atright">确认份额:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">手续费:<span>***</span></span>
+											</li>
+
+											<li>
+												<span class="atleft">备注:<span>***</span></span>
+
+											</li>
+										</ul>
+
+										<div class="qrs_notice">
+											<h4>重要提示:</h4>
+											<p notice_1>*   为了保障您/贵司的合法权益，请确认您/贵司的账户信息完整无误，以便我们为您/贵司提供更完善的服务。如您/贵司发现本确认书所载信息有任何错漏，请立即与我公司直销柜台联系。</p>
+											<p notice_2>*	如果您/贵司需要补充或修改账号信息资料，请及时通过我公司直销柜台办理变更手续。</p>
+											<p notice_3>*	您/贵司的基金交易确认是您/贵司的重要信息，为了您/贵司的账户安全，请妥善保存本确认书，如因您/贵司保管不当而导致有关信息失密、遗失或窃取等风险由您/贵司自行承担。</p>
+										</div>
+
+										<div class="qrs_footer">
+											<h5>上海允公资产管理有限公司</h5>
+											<li>
+												<span class="con_address">公司地址：上海市浦东新区银城中路501号上海中心大厦3107室 </span>
+												<span class="con_mailcode">邮政编码：200120</span>
+												<span class="con_hotline">客服热线：(021)58567018</span>
+												<span class="con_fax">直销传真：(021)58569722</span>
+											</li>
+										</div>
+										
+										<div class="seal"></div><!-- 印章 -->
+										
+									</div>
+									<!--endprint2-->
+									<div class="print_btn"><a href="" onclick="preview(2)">打印</a></div>
+									<div class="download_btn"><a href="javascript:;">下载</a></div>
+								</div>
+								
+							</div>				
+						</div>
+					</div>	
+
+					<!--列表底部-->
+					<div class="pagenav">
+						<!-- 页码
+						<div class="pagenum">
+							<a href="javascript:;" style="color:#bababa"><</a>
+							<a href="javascript:;">1</a>
+							<a href="javascript:;">2</a>
+							<a href="javascript:;">3</a>
+							<a href="javascript:;">4</a>
+							<a href="javascript:;">5</a>
+							<a href="javascript:;">></a>
+						</div>	 -->
+					</div>
+						
+				</div>
+			</div>
+
+		</div><!-- section1-wrap end -->
+	</div><!-- section1 end -->
+
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-wrap">
+			<div class="footer-left">
+				<div class="footer-nav">
+						<a href="../../../home/home.html">首页</a><span>|</span><a href="../../../summary/summary.html">走进允公</a><span>|</span><a href="../../../news/news1/news1.html">允公资讯</a><span>|</span><a href="../../../products/product1/product1.html">旗下产品</a><span>|</span><a href="javascript:;">会员中心</a><span>|</span><a href="../../../summary/recruitment/recruitment.html">人才招聘</a><span>|</span><a href="../../../summary/contact/contact.html">联系我们</a>
+				</div>
+
+				<div class="link">
+					<p class="p1">地址：上海市浦东新区银城中路501号上海中心大厦3107室</p>
+					<p class="p2"><span class="phone">电话：021-58567018</span><span class="mailcode">邮编：200120</span></p>
+				</div>
+
+				<p class="copyright">2016 © 上海允公资产管理有限公司 版权所有沪ICP备##########号</p>
+			</div>
+
+			<!-- 二维码 -->
+			<!-- <div class="footer-right"></div> -->
+		</div>
+	</div><!-- footer end -->
+
+<!-- 打印程序 -->
+<script>
+	function preview(oper) { 
+		if (oper < 10){ 
+		bdhtml=window.document.body.innerHTML;//获取当前页的html代码 
+		sprnstr="<!--startprint"+oper+"-->";//设置打印开始区域 
+		eprnstr="<!--endprint"+oper+"-->";//设置打印结束区域 
+		prnhtml=bdhtml.substring(bdhtml.indexOf(sprnstr)+18); //从开始代码向后取html 
+
+		prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));//从结束代码向前取html 
+		window.document.body.innerHTML=prnhtml; 
+		window.print(); 
+		window.document.body.innerHTML=bdhtml; 
+
+		}
+		 else{ 
+		window.print(); 
+		} 
+
+		}
+</script>
+
+<!-- 曲线-列表-切换 -->
+<script>
+/*01*/
+	var oLine1 = document.getElementById("line1");
+	var oList1 = document.getElementById("list1");
+
+	var oLinecon1 = document.getElementById("linecon1");
+	var oListcon1 = document.getElementById("listcon1");
+
+	oLine1.onclick = function(){
+		oLine1.className = "linepic active2"
+		oList1.className = "list"
+
+		oLinecon1.style.display = "block";
+		oListcon1.style.display = "none";
+	};
+
+	oList1.onclick = function(){
+		oLine1.className = "linepic"
+		oList1.className = "list active2"
+
+		oLinecon1.style.display = "none";
+		oListcon1.style.display = "block";
+	};
+/*02*/
+	var oLine2 = document.getElementById("line2");
+	var oList2 = document.getElementById("list2");
+
+	var oLinecon2 = document.getElementById("linecon2");
+	var oListcon2 = document.getElementById("listcon2");
+
+	oLine2.onclick = function(){
+		oLine2.className = "linepic active2"
+		oList2.className = "list"
+
+		oLinecon2.style.display = "block";
+		oListcon2.style.display = "none";
+	};
+
+	oList2.onclick = function(){
+		oLine2.className = "linepic"
+		oList2.className = "list active2"
+
+		oLinecon2.style.display = "none";
+		oListcon2.style.display = "block";
+	};
+
+</script>
+
+<!-- 净值查询-信息披露-份额电子确认书切换 -->
+<script>
+/*01*/
+	/*按钮*/
+	var oNetsearchbtn1 = document.getElementById("netsearch-btn1");
+	var oInfobtn1 = document.getElementById("info-btn1");
+	var oConfirmbtn1 = document.getElementById("confirm-btn1");
+
+	/*内容*/
+	var oNetsearchcon1 = document.getElementById("netsearch-con1");
+	var oInfocon1 = document.getElementById("info-con1");
+	var oConfirmcon1 = document.getElementById("confirm-con1");
+
+	function oNetsearchcon1show(){
+		oNetsearchbtn1.className = "active";
+		oInfobtn1.className = "";
+		oConfirmbtn1.className = "";
+
+		oNetsearchcon1.style.display = "block";
+		oInfocon1.style.display = "none";
+		oConfirmcon1.style.display = "none";
+	};
+
+	function oInfocon1show(){
+		oNetsearchbtn1.className = "";
+		oInfobtn1.className = "active";
+		oConfirmbtn1.className = "";
+
+		oNetsearchcon1.style.display = "none";
+		oInfocon1.style.display = "block";
+		oConfirmcon1.style.display = "none";
+	};
+
+	function oConfirmcon1show(){
+		oNetsearchbtn1.className = "";
+		oInfobtn1.className = "";
+		oConfirmbtn1.className = "active";
+
+		oNetsearchcon1.style.display = "none";
+		oInfocon1.style.display = "none";
+		oConfirmcon1.style.display = "block";
+	};
+
+/*02*/
+	/*按钮*/
+	var oNetsearchbtn2 = document.getElementById("netsearch-btn2");
+	var oInfobtn2 = document.getElementById("info-btn2");
+	var oConfirmbtn2 = document.getElementById("confirm-btn2");
+
+	/*内容*/
+	var oNetsearchcon2 = document.getElementById("netsearch-con2");
+	var oInfocon2 = document.getElementById("info-con2");
+	var oConfirmcon2 = document.getElementById("confirm-con2");
+
+	function oNetsearchcon2show(){
+		oNetsearchbtn2.className = "active";
+		oInfobtn2.className = "";
+		oConfirmbtn2.className = "";
+
+		oNetsearchcon2.style.display = "block";
+		oInfocon2.style.display = "none";
+		oConfirmcon2.style.display = "none";
+	};
+
+	function oInfocon2show(){
+		oNetsearchbtn2.className = "";
+		oInfobtn2.className = "active";
+		oConfirmbtn2.className = "";
+
+		oNetsearchcon2.style.display = "none";
+		oInfocon2.style.display = "block";
+		oConfirmcon2.style.display = "none";
+	};
+
+	function oConfirmcon2show(){
+		oNetsearchbtn2.className = "";
+		oInfobtn2.className = "";
+		oConfirmbtn2.className = "active";
+
+		oNetsearchcon2.style.display = "none";
+		oInfocon2.style.display = "none";
+		oConfirmcon2.style.display = "block";
+	};
+</script>
+
+
+
+<!-- 产品垂直选项卡 -->
+<script>
+	$("#firstpane p.menu_head").click(function(){
+		$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+	});
+
+	/*小三角*/
+	$("#menu_head_1").click(function(){
+		if($("#part0_1").hasClass("active_open")){
+			$("#part0_1").removeClass("active_open");
+		}
+		else{
+			$("#part0_1").addClass("active_open");
+			$("#part0_2").removeClass("active_open");/*同时还原其他已经打开的*/
+		}
+	});
+
+	$("#menu_head_2").click(function(){
+		if($("#part0_2").hasClass("active_open")){
+			$("#part0_2").removeClass("active_open");
+		}
+		else{
+			$("#part0_2").addClass("active_open");
+			$("#part0_1").removeClass("active_open");
+		}
+	});
+
+</script>
+
+<!-- select产品选择 -->
+<script>
+	$('.select_head').on('click',function(e){
+		if($('.select_con').is(':hidden')){
+			$('.select_con').slideToggle(200);
+		}
+		else{
+			$('.select_con').hiden();
+		}
+		$(document).one('click',function(){
+			$('.select_con').hide();
+		});
+
+		e.stopPropagation();
+	});
+
+	$('.select_con').on('click',function(){
+		e.stopPropagation();
+	});
+</script>
+
+<!-- 日历 -->
+<script>
+	/*绑定元素*/
+	!function(){
+		laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+
+		laydate({elem: '#demo1-1'});//绑定元素
+		laydate({elem: '#demo1-2'});//绑定元素
+
+		laydate({elem: '#demo2-1'});//绑定元素
+		laydate({elem: '#demo2-2'});//绑定元素
+
+	}();
+</script>
+
+
+<!-- 曲线图 -->
+<script>
+/*1*/
+ $(function () {	  
+	        // Create the chart
+	        Highcharts.stockChart('container1', {
+	        	
+
+	            rangeSelector: {
+	                selected: 1,	
+  					inputEnabled:false,
+						enabled:false
+	            },
+
+	            	 xAxis: {
+	   
+	          			/*tickWidth:1, *//*刻度线的宽度*/
+				        type: 'datetime',
+				      /*  X轴日期刻度格式转换*/
+				        dateTimeLabelFormats: {
+				           /* second: '%Y-%m-%d<br/>%H:%M:%S',*/
+				           /* minute: '%Y-%m-%d<br/>%H:%M',*/
+				           /* hour: '%Y-%m-%d<br/>%H:%M',*/
+				            day: '%Y<br/>%m-%d',
+				          /*  week: '%Y<br/>%m-%d',*/
+				            month: '%Y-%m',
+				            year: '%Y'
+				        }
+				    },
+
+	           
+
+	           /* X轴导航条是否显示*/
+	            navigator:{
+	            	 enabled:false
+	            },
+
+	            /*右上角下拉菜单功能*/
+	            exporting:{
+	            	 enabled:false
+	            },
+	            /*版权信息*/
+		        credits:{
+		             enabled:false // 禁用版权信息
+		        },
+
+		        /*列表标题*/
+	            title: {
+	                text: ''
+	            },
+
+	            series: [{
+
+	                name: '累计净值',
+	                color: '#b4e5ff',/*曲线颜色*/
+	                lineWidth: 3,/*线宽度*/
+	                data: 
+	                [
+	                    
+	                    [1475193600000,0.9993],
+						[1483056000000,0.9567],	
+						[1490832000000,null],
+
+						[1490832000000,null],	
+						[1498780800000,null],	
+						[1506729600000,null],	
+						[1514592000000,null],	
+
+						[1522368000000,null],	
+						[1530316800000,null],	
+						[1538265600000,null],	
+						[1546128000000,null],
+
+						[1553904000000,null],	
+						[1561852800000,null],	
+
+					],
+
+	                tooltip: {
+	                    valueDecimals: 4,/*保留小数位数*/
+
+	                     dateTimeLabelFormats: {
+				          /*  second: '%Y-%m-%d<br/>%H:%M:%S',
+				            minute: '%Y-%m-%d<br/>%H:%M',
+				            hour: '%Y-%m-%d<br/>%H:%M',*/
+				            day: '%Y-%m-%d',
+				           /* week: '%Y<br/>%m-%d',*/
+				            month: '%Y-%m',
+				            year: '%Y'
+				        },
+
+				        /*浮动提示框内容*/
+				        pointFormat:'{series.name}: <b>{point.y}</b><br/>' /*默认前面有一个点：<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>*/
+	                }
+	            }]
+	        });			
+	});
+
+
+/*2*/
+ $(function () { 
+	        // Create the chart
+	        Highcharts.stockChart('container2', {
+	        	
+
+	            rangeSelector: {
+	                selected: 1,	
+  					inputEnabled:false,
+						enabled:false
+	            },
+
+	            	 xAxis: {
+	   
+	          			/*tickWidth:1, *//*刻度线的宽度*/
+				        type: 'datetime',
+				      /*  X轴日期刻度格式转换*/
+				        dateTimeLabelFormats: {
+				           /* second: '%Y-%m-%d<br/>%H:%M:%S',*/
+				           /* minute: '%Y-%m-%d<br/>%H:%M',*/
+				           /* hour: '%Y-%m-%d<br/>%H:%M',*/
+				            day: '%Y-%m-%d',
+				          /*  week: '%Y<br/>%m-%d',*/
+				            month: '%Y-%m',
+				            year: '%Y'
+				        }
+				    },
+
+	           
+
+	           /* X轴导航条是否显示*/
+	            navigator:{
+	            	 enabled:false
+	            },
+
+	            /*右上角下拉菜单功能*/
+	            exporting:{
+	            	 enabled:false
+	            },
+	            /*版权信息*/
+		        credits:{
+		             enabled:false // 禁用版权信息
+		        },
+
+		        /*列表标题*/
+	            title: {
+	                text: ''
+	            },
+
+	            series: [{
+
+	                name: '累计净值',
+	                color: '#b4e5ff',/*曲线颜色*/
+	                lineWidth: 3,/*线宽度*/
+	                data: 
+	                [
+	                   
+						[1483056000000,0.9770],		
+
+					],
+
+	                tooltip: {
+	                    valueDecimals: 4,/*保留小数位数*/
+
+	                     dateTimeLabelFormats: {
+				          /*  second: '%Y-%m-%d<br/>%H:%M:%S',
+				            minute: '%Y-%m-%d<br/>%H:%M',
+				            hour: '%Y-%m-%d<br/>%H:%M',*/
+				            day: '%Y-%m-%d',
+				           /* week: '%Y<br/>%m-%d',*/
+				            month: '%Y-%m',
+				            year: '%Y'
+				        },
+
+				        /*浮动提示框内容*/
+				        pointFormat:'{series.name}: <b>{point.y}</b><br/>' /*默认前面有一个点：<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>*/
+	                }
+	            }]
+	        });			
+	});
+
+
+</script>
+</body>
+</html>

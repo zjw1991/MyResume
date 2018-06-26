@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人才招聘</title>
+	<link rel="stylesheet" href="css/recruitment.css">
+</head>
+<body>
+	
+	<!-- head -->
+	<div class="head">
+		<div class="head-wrap">
+			<div class="logo">
+				<a href=""><img src="images/logo.png" alt="允公资产"></a>
+			</div>
+			<ul class="nav">
+				<li><a href="../../home/home.html">首页</a></li>
+				<li class="active"><a href="../summary.html">走进允公</a></li>
+				<li><a href="../../news/news1/news1.html">允公资讯</a></li>
+				<li><a href="../../products/product1/product1.html">旗下产品</a></li>
+				<li><a href="../../membercenter/myaccount/allproducts/allproducts.html">会员中心</a></li>
+			</ul>
+			<!-- 登录过后图标 -->
+			<div class="person" id="person">
+				<div class="person-logo">陆军</div>
+
+				<div class="person-list" id="personList" style="display:none">
+					<a href="../../membercenter/myaccount/allproducts/allproducts.html">我的账户</a>
+					<a href="../../membercenter/useraccount/userinfo/userinfo.html">账号管理</a>
+					<a href="../../login/login.html">退出账号</a>
+				</div>
+			</div>
+
+			<script>
+				var oPerson = document.getElementById("person");
+				var oPersonList = document.getElementById("personList");
+				
+				oPerson.onmouseover = function(){
+					oPersonList.style.display = "block";
+				};
+
+				oPerson.onmouseout = function(){
+					oPersonList.style.display = "none";
+				};
+			</script>
+		</div>
+	</div><!-- head end -->
+
+	<!-- banner -->
+	<div class="banner">
+		<img src="images/banner.jpg" alt="" width="100%">
+	</div>
+
+	<!-- pagenav -->
+	<div class="pagenav">
+		<a href="../../home/home.html"><span class="home-icon"></span>首页</a> 
+		>
+		<a href="javascript:;" class="news">走进允公</a>
+		>
+		<a href="javascript:;" class="product">人才招聘</a>
+	</div>
+
+	<!-- section1 -->
+	<div class="section1">
+		<div class="section1-wrap">
+			<ul class="title">
+				<li class="li-margin"><a href="../summary.html">允公简介</a></li>
+				<li class="li-margin"><a href="../idea/idea.html" >投资理念</a></li>
+				<li class="li-margin"><a href="" class="active">人才招聘</a></li>
+				<li><a href="../contact/contact.html">联系我们</a></li>
+			</ul>
+			
+			<div class="content">
+				<div class="job1">
+					<div class="job1-left">
+						<p class="title"><span>01</span>投资经理助理实习2名</p>
+						<img src="images/pic1.jpg" alt="" width="206px" height="139px">
+					</div>
+					<div class="job1-right">
+						<p class="p1">工作内容：</p>
+						<p class="p2">
+						1、参与上市公司并购重组项目的资源整合；<br>
+						2、辅助行业研究、政策研究、项目尽职调查；<br>
+						3、协助研究员进行行业的数据收集工作。
+						</p>
+						<!-- <p>工作时间：一周3天以上。</p> -->
+						<p class="p3">工作地点：陆家嘴。</p>
+						<p class="p4">任职资格：
+						1.重点院校在读大四或研究生；<br>
+						2.熟练应用Excel、Power Point等办公软件者优先，英语能力强者优先；
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<p class="link">有意应聘者请将个人简历发送至电子邮箱jixuelian@yungongassets.com，邮件主题请注明“姓名+学校+年级+实习天数”</p>
+		</div>
+	</div><!-- section1 end -->
+	
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-wrap">
+			<div class="footer-left">
+				<div class="footer-nav">
+					<a href="../../home/home.html">首页</a><span>|</span><a href="../summary.html">走进允公</a><span>|</span><a href="../../news/news1/news1.html">允公资讯</a><span>|</span><a href="../../products/product1/product1.html">旗下产品</a><span>|</span><a href="../../membercenter/myaccount/allproducts/allproducts.html">会员中心</a><span>|</span><a href="">人才招聘</a><span>|</span><a href="../contact/contact.html">联系我们</a>
+				</div>
+
+				<div class="link">
+					<p class="p1">地址：上海市浦东新区银城中路501号上海中心大厦3107室</p>
+					<p class="p2"><span class="phone">电话：021-58567018</span><span class="mailcode">邮编：200120</span></p>
+				</div>
+
+				<p class="copyright">2016 © 上海允公资产管理有限公司 版权所有沪ICP备##########号</p>
+			</div>
+			
+			<!-- 二维码 -->
+			<!-- <div class="footer-right"></div> -->
+		</div>
+	</div><!-- footer end -->
+
+
+	<!--to-top-->
+	<a href="javascript:void(0)" class="to-top"></a>
+
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+	<!-- to-top -->
+	<script>
+		(function( $ ){'use strict';
+		    
+		    $.fn.toTop = function(opt){
+		        
+		        //variables
+		        var elem = this;
+		        var win = $(window);
+		        var doc = $('html, body');
+		        
+		        //Extended Options
+		        var options = $.extend({
+		            autohide: true,
+		            offset: 420, 
+		            speed: 500,
+		            position: true,
+		        
+		        }, opt);
+		        
+
+		        elem.css({
+		            'cursor': 'pointer' /*鼠标移入返回顶部按钮显示小手*/
+		        });
+		        
+		        if(options.autohide){
+		            elem.css('display', 'none');
+		        }
+		        
+		        if(options.position){
+		            elem.css({
+		                'position': 'fixed',
+		                'right': options.right,
+		                'bottom': options.bottom,
+		            });
+		        }
+		        
+		        /*通过CSS动画来返回到页面顶部*/
+		        elem.click(function(){
+		            doc.animate({scrollTop: 0}, options.speed);
+		        });
+		        
+		        /*返回顶部按钮淡入淡出效果*/
+		        win.scroll(function(){
+		            var scrolling = win.scrollTop();
+		            if(options.autohide){
+		                if(scrolling > options.offset){
+		                    elem.fadeIn();/*加上options.speed 速度与滚动条速度同步*/
+		                }
+		                else 
+		                    elem.fadeOut();
+		            }
+		            
+		        });
+		        
+		    };
+		    
+		}( jQuery ));
+	</script>
+	<!-- to-top -->
+	<script>
+		$(function() {
+			$('.to-top').toTop({
+				/*此处添加参数*/
+				speed:500,
+				offset: 800, 
+			});
+
+		});
+	</script>
+
+
+	
+</body>
+</html>

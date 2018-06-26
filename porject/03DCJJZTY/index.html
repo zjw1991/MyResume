@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大成基金</title>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<!--IE8只能支持jQuery1.9-->
+	<!--[if lte IE 8]>
+	<script src="js/jquery.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	  $(document).ready(function($) {
+	   $(".nav-index a").click(function(event) { 
+	      var index=this.title
+	      var id='#'+'index_'+index
+	     $("html,body").animate({scrollTop: $(id).offset().top}, 500);
+	   });
+	  });
+	</script>
+
+	<style>
+		/* common */
+		*{
+			padding:0;
+			margin:0;
+		}
+		body{
+			overflow-x:hidden;
+		}
+		img{
+			border:none;
+			display:block;
+		}
+
+		/* banner */
+		.banner{
+			width:1920px;
+			height:802px;
+			position:relative;
+			left:50%;
+			margin-left:-960px;
+		}
+
+		/* section */
+		.section1{
+			width:1920px;
+			height:563px;
+			position:relative;
+			background:url(images/section1.jpg) no-repeat;
+			left:50%;
+			margin-left:-960px;
+			overflow:hidden;
+		}
+		.section2{
+			width:1920px;
+			height:3514px;
+			background:url(images/section2.jpg) no-repeat;
+			position:relative;
+			left:50%;
+			margin-left:-960px;
+			z-index:-11;
+		}
+		.section3{
+			width:1920px;
+			height:3558px;
+			background:url(images/section3.jpg) no-repeat;
+			position:relative;
+			left:50%;
+			margin-left:-960px;
+			z-index:-11;
+		}
+		.section4{
+			width:1920px;
+			height:2324px;
+			background:url(images/section4.jpg) no-repeat;
+			position:relative;
+			left:50%;
+			margin-left:-960px;
+			z-index:-11;
+		}
+		.section5{
+			width:1920px;
+			height:1985px;
+			background:url(images/section5.jpg) no-repeat;
+			position:relative;
+			left:50%;
+			margin-left:-960px;
+			z-index:-11;
+		}
+
+
+		/* nav */
+		.nav-index{
+			width:1920px;
+			height:100px;
+			z-index:1001;
+			margin-top:10px;
+		}
+
+		/* 菜单导航 */
+		.nav{
+			font-size:0; /* 去掉图片间隙 */
+			z-index:1001;
+		}
+		.nav a{
+			display:inline-block;
+			width:187px;
+			height:87px;
+			position: absolute;
+			z-index:1001;
+
+		}
+		.index1,.index2,.index3,.index4{
+			display:inline-block;
+			width:187px;
+			height:87px;
+			z-index:1001;
+		}
+
+		.index1{
+			background:url(images/btn1.png) ;
+			margin-left:553px;
+			z-index:1001;
+		}
+		 .index1:hover{
+			background:url(images/btn1.png) 0 -87px;
+		}
+		 
+
+		.index2{
+			background:url(images/btn2.png) ;
+			left: 50%;
+			z-index:1001;
+			margin-left: -198px;
+		}
+		 .index2:hover{
+			background:url(images/btn2.png) 0 -87px;
+		} 
+
+
+		.index3{
+			background:url(images/btn3.png) ;
+			left: 50%;
+			z-index:1001;
+			margin-left: 9px;
+		}
+		 .index3:hover{
+			background:url(images/btn3.png) 0 -87px;
+		}
+		 
+
+		.index4{
+			background:url(images/btn4.png) ;
+			left: 50%;
+			margin-left: 214px;
+			z-index:1001;
+		}
+		 .index4:hover{
+			background:url(images/btn4.png) 0 -87px;
+		} 
+
+		/* 点击激活样式 */
+		.thisclass{
+			background-position:0px -87px; 
+		}
+	
+		
+		.buy_btn{
+			left: 50%;
+			margin-left: 430px;
+			margin-top: 90px;
+			z-index:1001;
+
+		}
+	
+	</style>
+</head>
+
+<body>
+	<!-- banner -->
+	<img src="images/banner.jpg" alt="" class="banner">
+
+	<!-- section1 -->
+	<div class="section1" id="index_1">
+		<!-- nav -->
+		<div class="nav-index nav" id="fixedMenu">
+			<a href="javascript:void(0)" title="2" class="index1"></a>
+			<a href="javascript:void(0)" title="3" class="index2"></a>
+			<a href="javascript:void(0)" title="4" class="index3"></a>
+			<a href="javascript:void(0)" title="5" class="index4"></a>
+			<!-- 1折购基 -->
+			<a href="https://etrading.dcfund.com.cn/etrading/page/frame/Login.jsp" class="buy_btn"><img src="images/buy.png" alt=""></a>
+		</div>
+	
+		
+	</div>
+	
+
+	<div class="section2" id="index_2"></div>
+	<div class="section3" id="index_3"></div>
+	<div class="section4" id="index_4"></div>
+	<div class="section5" id="index_5"></div>
+
+	
+	
+	<!-- 悬浮菜单导航 -->
+	<script type="text/javascript">  
+	    $(function () {  
+	        var ie6 = /msie 6/i.test(navigator.userAgent)  
+	        , dv = $('#fixedMenu'), st;  
+	        dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离  
+	        $(window).scroll(function () {  
+	            st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);  
+	            if (st >= parseInt(dv.attr('otop'))) {  
+	                if (ie6) {//IE6不支持fixed属性，所以只能靠设置position为absolute和top实现此效果  
+	                    dv.css({ position: 'absolute', top: st });  
+	                }  
+	                else if (dv.css('position') != 'fixed') dv.css({ 'position': 'fixed', top: 0 });  
+	            } else if (dv.css('position') != 'static') dv.css({ 'position': 'static' });  
+	        });  
+	    });       
+	</script> 
+
+	<!-- 点击导航按钮变换背景 -->
+	<script>
+		$(function(){
+			var nav = $(".nav a");
+			nav.click(function(){
+				$(this).addClass("thisclass").siblings().removeClass("thisclass");/*thisclass一定放在最外层，这样才有兄弟元素*/
+			});
+		});
+	</script>
+
+
+</body>
+</html>

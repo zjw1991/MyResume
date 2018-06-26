@@ -1,0 +1,228 @@
+		*{
+			padding:0;
+			margin:0;
+		}
+		body{
+			overflow:hidden;
+		}
+		.main{
+			position:absolute;
+			width:100%;
+			height:100%;
+			background:url(../images/bg.jpg) no-repeat;
+			background-size:100% 100%;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg',sizingMethod='scale')/* 兼容IE9以下 */
+		}
+		.home-btn{
+			display:block;
+			width:102px;
+			height:155px;
+			background:url(../images/home-btn.png) no-repeat;
+			position:absolute;
+			left:47.5%;
+			top:86.5%;
+		}
+
+
+		/* 登录注册框 */
+		.mainwrap{
+			width: 850px;
+			height: 614px;
+			border-radius: 6px;
+			background: #434343;
+			position: fixed;
+			left: 50%;
+			margin-left: -425px;
+			top: 50%;
+			margin-top: -307px;
+			z-index: 1003;
+		}
+		/* top */
+		.main-top{
+			width: 850px;
+			height: 285px;
+		}
+			/* top-left */
+		.main-top .top-text{
+width: 307px;
+height: 186px;
+float: left;
+margin-left: 49px;
+margin-top: 65px;
+		}
+		.main-top .top-text p{
+			font-size:16px;
+			color:#fff;
+			line-height:1.6em;
+		}
+		.main-top .top-text .p1, .main-top .top-text .p2{
+			text-indent:2em;
+		}
+		.main-top .top-text .p3{
+			margin-left:240px;
+			margin-top:40px;
+		}
+		.main-top .top-text .p4{
+			margin-left:200px;
+			width:200px;
+		}
+
+
+			/* top-right */
+		.main-top .chart{
+width: 286px;
+height: 282px;
+float: left;
+margin-left: 195px;
+margin-top: 10px;
+border-radius: 6px;
+background: #fff;
+		}
+		
+		.main-top .chart .a1, .main-top .chart .a2{
+			display:inline-block;
+			text-decoration:none;
+			width:143px;
+			height:33px;
+			font-size:16px;
+			font-weight:bold;
+			color:#989898;
+			text-align:center;
+			line-height:33px;
+		}
+
+		/* 登录 */
+		.login p{
+			margin-left:22px;
+		}
+		.login .p1{
+			margin-top:20px;
+			font-size:16px;
+			color:#00a6ba;
+		}
+		.login .p3{
+			margin-top:15px;
+			font-size:16px;
+			color:#00a6ba;
+		}
+
+		.login .p2 input{
+			width: 200px;
+			padding: 0 6px 0 35px;
+			line-height: 30px;
+			height: 30px;
+			border: 1px solid #dbe1e4;
+			background: url(../images/username.jpg) no-repeat;
+			margin-top:10px;
+		}
+		.login .p4 input{
+			width: 200px;
+			padding: 0 6px 0 35px;
+			line-height: 30px;
+			height: 30px;
+			border: 1px solid #dbe1e4;
+			background: url(../images/lock.jpg) no-repeat;
+			margin-top:10px;
+		}
+
+
+		
+		
+		.login .button{
+			margin-top:30px;
+			width:244px;
+			height:33px;
+			background:gray;
+			color:#fff;
+			font-size:16px;
+			font-weight:bold;
+			border:none;
+			margin-left:23px;
+			border-radius:3px;
+		}
+		.login .reg_now{
+			float:left;
+			margin-top:15px;
+		}
+		.login .fot_code{
+			float:right;
+			margin-top:15px;
+			margin-right:17px;
+		}
+		.login .reg_now a,.login .fot_code a{
+			text-decoration:none;
+			color:#e8a080;
+			font-size:12px;
+		}
+
+
+		/* main-bottom */
+		.main-bottom{
+			width:753px;
+			height:376px;
+		}
+		.main-bottom .content{
+			width: 826px;
+			height: 303px;
+			margin-left: 12px;
+			margin-top: 16px;
+			background: #fff;
+			overflow: hidden;
+			border-radius:6px;
+		}
+		.main-bottom .content .contentimg{
+			margin-top:14px;
+			margin-left:12px;
+		}
+		.main-bottom .content p{
+			width: 805px;
+			font-size: 12px;
+			color: #666;
+			margin-left: 12px;
+			line-height: 1.6em;
+		}
+		.main-bottom .content .p1{
+			margin-top:12px;
+		}
+		.content .p1, .content .p2, .content .p3 ,.content .p4, .content .p5, .content .p6, .content .p7{
+			text-indent:2em;
+		}
+		.content .confirm2{
+			width:253px;
+			margin:0 auto;
+			margin-top:15px;
+		}
+		.content .confirm2 span{
+			font-size:18px;
+			font-weight:bold;
+			color:#666;
+			margin-left:15px;
+		}
+		#remind1, #remind2{
+			font-size:12px;
+			color:red;
+		}
+		#remind1{
+position: absolute;
+top: 32px;
+left: 614px;
+		}
+		#remind2{
+position: absolute;
+top: 111px;
+left: 613px;
+		}	
+
+		
+		.shadow{
+			background-color: #000000;
+		    bottom: 0;
+		    left: 0;
+		    margin: 0 auto;
+		    opacity: 0.4;
+		    position: fixed;
+		    right: 0;
+		    top: 0;
+		    width: 100%;
+		    z-index: 1002;
+		}

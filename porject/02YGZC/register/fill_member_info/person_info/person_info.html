@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>允公资产</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<a href="home/home.html" class="home-btn"></a><!-- 进入首页 -->
+	</div>
+
+	<!--遮罩-->
+	<div class="shadow"></div>
+
+	<!-- 框 -->
+	<div class="mainwrap">
+		<div class="main_top">
+			<div class="step step1">
+				<p class="number number_active">1</p>
+				<p class="step_text step_text_active">选择用户类型</p>
+			</div>
+			<div class="step step2">
+				<p class="number number_active">2</p>
+				<p class="step_text step_text_active">填写会员信息</p>
+			</div>
+			<div class="step step3">
+				<p class="number">3</p>
+				<p class="step_text">特定对象认定</p>
+			</div>
+			<div class="step step4">
+				<p class="number">4</p>
+				<p class="step_text">完成注册</p>
+			</div>
+
+			<!-- step_pic -->
+			<div class="step_pic1"></div>
+			<div class="step_pic2"></div>
+			<div class="step_pic3"></div>
+		</div>
+		
+		<div class="content">
+			<h3><span class="span1">个人用户</span>请您如实填写基本信息</h3>
+
+			<form action="" method="">
+				<div class="content_left">
+					<!-- 姓名 -->
+					<p>
+						<input type="text" name="Name" placeholder="姓名" class="name" >
+					</p>
+					<!-- 密码 -->
+					<p>
+						<input type="password" name="password" placeholder="设置密码" autocomplete="new-password" class="password">
+					</p>
+					<!-- 证件类型和证件号码 -->
+					<p class="ccard">
+						<select name="CardType" class="cardtype">
+	                        <option value="">证件类型</option>
+	                        <option value="身份证">身份证</option>
+	            			<option value="营业执照">营业执照</option>
+			                <option value="护照">护照</option>
+			                <option value="回乡证">回乡证</option>
+                        </select>
+                        <input name="CardId" placeholder="证件号码"  type="text" class="cardid">
+					</p>
+					<!-- 填写手机号码和填写验证码 -->
+					<p class="checkphone">
+						<input class="phone" id="phone" name="Phone" maxlength="11"  placeholder="请填写手机号码" type="text">
+						<input class="smscode" name="smscode" placeholder="请填写验证码" type="text">
+						<input class="sendcodebtn" id="sendcodebtn" name="sendcodebtn"  value="发送验证短信" type="button">
+						<span id="labelphone" class="laberphone"></span>
+						
+						<!-- 验证手机号码 -->
+						<script>
+							var myreg = /^1[34578]\d{9}$/;
+							$('#phone').blur(function(){
+								if (!myreg.exec($('#phone').val())){
+										$('#labelphone').html('请输入正确的手机号！');
+									}
+								/*符合或者为空时，清除提示内容*/
+								if (myreg.exec($('#phone').val())){
+									$('#labelphone').html('');
+								}
+								if ($('#phone').val() == ''){
+									$('#labelphone').html('');
+								}
+							})	
+						</script>
+
+						<!-- 获取验证码，倒计时 -->			
+					    <script type="text/javascript"> 
+						    var wait=60; 
+						    var myreg = /^1[34578]\d{9}$/;
+						    function time(o) { 
+						            if (wait == 0) { 
+						                o.removeAttribute("disabled");           
+						                o.value="获取验证码"; 
+						                wait = 60; 
+						            } else { 
+						                o.setAttribute("disabled", true); 
+						                o.value=wait+"秒后重发"; 
+						                wait--; 
+						                setTimeout(function() { 
+						                    time(o) 
+						                }, 
+						                1000) 
+						            } 
+						        } 
+						      /*点击验证正确后执行倒计时*/
+						   	 document.getElementById("sendcodebtn").onclick=function(){
+						    	if (!myreg.exec($('#phone').val())){
+										$('#labelphone').html('请输入正确的手机号！');
+										return false;
+									}
+								/*符合或者为空时，清除提示内容*/
+								if (myreg.exec($('#phone').val())){
+									$('#labelphone').html('');
+									time(this);
+								}
+								if ($('#phone').val() == ''){
+									$('#labelphone').html('');
+								}
+						    	
+						    } 				    
+					    </script> 
+					</p>
+
+					<!-- 填写图形验证码 -->
+					<p>
+						<input class="picvc" name="vc"  placeholder="请填写图形验证码" type="text">
+						<img class="vcImg" alt="点击刷新" onclick="chargeimg()" src="images/verifycode.gif">
+						<!-- 通过后台更换验证码 -->
+						<!-- <script>
+							function chargeimg() {
+							  $(".vcImg").attr("src", "http://www.starrockinvest.com/verifycode?prefix=ur&time=" + Math.random());
+							}
+						</script> -->
+					</p>
+					<!-- 上一步和下一步 -->
+					<p>
+						<a href="../../changequestion/changequestion.html" class="prev_step">上一步</a>
+						<input name="btn-register" value="下一步" class="next_step"  type="button" onclick="checkinfo()">
+						<!-- 点击下一步判断信息是否填写完整 -->
+						<script>
+							function checkinfo(){
+								if($('.name').val()=='' || $('.password').val()=='' || $('.cardtype').val()==''|| $('.cardid').val()=='' || $('.phone').val()=='' || $('.smscode').val()=='' || $('.picvc').val()==''){
+									alert('请填写全部信息！');
+								}
+								else{
+									window.location='../../fill_question/personal/person_que.html';
+								}
+							};						
+						</script>
+					</p>
+				</div>
+			</form>
+			<p class="promote">
+				温馨提示：根据中国证监会、中国基金业协会监管要求，应当依法保障私募基金投资者的知情权，禁止向不特定对象展示私募基金非公开信息。请您如实填写会员资料，感谢您的理解与支持。
+			</p>
+		</div>
+			
+			
+	</div>
+
+</body>
+</html>

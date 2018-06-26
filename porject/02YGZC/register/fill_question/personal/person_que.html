@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>允公资产</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<a href="home/home.html" class="home-btn"></a><!-- 进入首页 -->
+	</div>
+
+	<!--遮罩-->
+	<div class="shadow"></div>
+
+	<!-- 框 -->
+	<div class="mainwrap">
+		<div class="main_top">
+			<div class="step step1">
+				<p class="number number_active">1</p>
+				<p class="step_text step_text_active">选择用户类型</p>
+			</div>
+			<div class="step step2">
+				<p class="number number_active">2</p>
+				<p class="step_text step_text_active">填写会员信息</p>
+			</div>
+			<div class="step step3">
+				<p class="number number_active">3</p>
+				<p class="step_text step_text_active">特定对象认定</p>
+			</div>
+			<div class="step step4">
+				<p class="number">4</p>
+				<p class="step_text">完成注册</p>
+			</div>
+
+			<!-- step_pic -->
+			<div class="step_pic1"></div>
+			<div class="step_pic2"></div>
+			<div class="step_pic3"></div>
+		</div>
+
+		<div class="main_section">
+			<div class="section_top">
+				<p class="title1">私募投资基金投资者风险问卷调查 ：</p>
+				<p class="title1_content1">风险提示：私募基金投资需承担各类风险，本金可能遭受损失。同时，私募基金投资还要考虑市场风险、信用风险、流动性风险、操作风险等各类投资风险。您在基金认购过程中应当注意核对自己的风险识别和风险承受能力，选择与自己风险识别能力和风险承受能力相匹配的私募基金。</p>
+				<p class="title1_content2">以下一系列问题可在您选择合适的私募基金前，协助评估您的风险承受能力、理财方式及投资目标。</p>
+			</div>
+			<!-- 问题 -->
+			<form action="" method="">
+				<div class="question">
+					<h3>一、基本信息</h3>
+						<p class="que1">
+							<h5>1、您的年龄介于</h5>
+							<label><input type="radio" name="radio1" value="A">&nbsp;&nbsp;18-30岁</label><br>
+							<label><input type="radio" name="radio1" value="B">&nbsp;&nbsp;31-50岁</label><br>
+							<label><input type="radio" name="radio1" value="C">&nbsp;&nbsp;51-65岁</label><br>
+							<label><input type="radio" name="radio1" value="D">&nbsp;&nbsp;高于65岁</label>
+						</p>
+						<p class="que2">
+							<h5>2、你的学历</h5>
+							<label><input type="radio" name="radio2" value="A">&nbsp;&nbsp;高中及以下</label><br>
+							<label><input type="radio" name="radio2" value="B">&nbsp;&nbsp;中专或大专</label><br>
+							<label><input type="radio" name="radio2" value="C">&nbsp;&nbsp;本科</label><br>
+							<label><input type="radio" name="radio2" value="D">&nbsp;&nbsp;硕士及以上</label>
+						</p>
+						<p class="que3">
+							<h5>3、您的职业为</h5>
+							<label><input type="radio" name="radio3" value="A">&nbsp;&nbsp;无固定职业</label><br>
+							<label><input type="radio" name="radio3" value="B">&nbsp;&nbsp;专业技术人员</label><br>
+							<label><input type="radio" name="radio3" value="C">&nbsp;&nbsp;一般企事业单位员工</label><br>
+							<label><input type="radio" name="radio3" value="D">&nbsp;&nbsp;金融行业一般从业人员</label>
+						</p>
+				
+					<h3>二、财务状况</h3>
+						<p class="que4">
+							<h5>1、您的家庭可支配年收入为（折合人民币）？</h5>
+							<label><input type="radio" name="radio4" value="A">&nbsp;&nbsp;50万元以下</label><br>
+							<label><input type="radio" name="radio4" value="B">&nbsp;&nbsp;50-100万元</label><br>
+							<label><input type="radio" name="radio4" value="C">&nbsp;&nbsp;100-500万元</label><br>
+							<label><input type="radio" name="radio4" value="D">&nbsp;&nbsp;500-1000万元</label><br>
+							<label><input type="radio" name="radio4" value="E">&nbsp;&nbsp;1000万元以上</label>
+						</p>
+						<p class="que5">
+							<h5>2、在您每年的家庭可支配收入中，可用于金融投资（储蓄存款除外）的比例为？</h5>
+							<label><input type="radio" name="radio5" value="A">&nbsp;&nbsp;小于10%</label><br>
+							<label><input type="radio" name="radio5" value="B">&nbsp;&nbsp;10%至25%</label><br>
+							<label><input type="radio" name="radio5" value="C">&nbsp;&nbsp;25%至50%</label><br>
+							<label><input type="radio" name="radio5" value="D">&nbsp;&nbsp;大于50%</label>
+						</p>
+			
+					<h3>三、投资知识</h3>
+						<p class="que6">
+							<h5>1、 您的投资知识可描述为</h5>
+							<label><input type="radio" name="radio6" value="A">&nbsp;&nbsp;有限：基本没有金融产品方面的知识</label><br>
+							<label><input type="radio" name="radio6" value="B">&nbsp;&nbsp;一般：对金融产品及其相关风险具有基本的知识和理解</label><br>
+							<label><input type="radio" name="radio6" value="C">&nbsp;&nbsp;丰富：对金融产品及其相关风险具有丰富的知识和理解</label>
+						</p>
+						<p class="que7">
+							<h5>2、您的投资经验可描述为</h5>
+							<label><input type="radio" name="radio7" value="A">&nbsp;&nbsp;除银行储蓄外，基本没有其他投资经验</label><br>
+							<label><input type="radio" name="radio7" value="B">&nbsp;&nbsp;购买过债券、保险等理财产品</label><br>
+							<label><input type="radio" name="radio7" value="C">&nbsp;&nbsp;参与过股票、基金等产品的交易</label><br>
+							<label><input type="radio" name="radio7" value="D">&nbsp;&nbsp;参与过权证、期货、期权等产品的交易</label>
+						</p>
+						<p class="que8">
+							<h5>3、您有多少年投资基金、股票、信托、私募证券或金融衍生产品等风险投资品的经验？</h5>
+							<label><input type="radio" name="radio8" value="A">&nbsp;&nbsp;没有经验</label><br>
+							<label><input type="radio" name="radio8" value="B">&nbsp;&nbsp;少于2年</label><br>
+							<label><input type="radio" name="radio8" value="C">&nbsp;&nbsp;2至5年</label><br>
+							<label><input type="radio" name="radio8" value="D">&nbsp;&nbsp;5至10年</label><br>
+							<label><input type="radio" name="radio8" value="E">&nbsp;&nbsp;10年以上</label>
+						</p>
+
+					<h3>四、投资目标</h3>
+						<p class="que9">
+							<h5>1、您计划的投资期限是多久？</h5>
+							<label><input type="radio" name="radio9" value="A">&nbsp;&nbsp;1年以下</label><br>
+							<label><input type="radio" name="radio9" value="B">&nbsp;&nbsp;1至3年</label><br>
+							<label><input type="radio" name="radio9" value="C">&nbsp;&nbsp;3至5年</label><br>
+							<label><input type="radio" name="radio9" value="D">&nbsp;&nbsp;5年以上</label>
+						</p>
+						<p class="que10">
+							<h5>2、您的投资目的是？</h5>
+							<label><input type="radio" name="radio10" value="A">&nbsp;&nbsp;资产保值</label><br>
+							<label><input type="radio" name="radio10" value="B">&nbsp;&nbsp;资产稳健增长</label><br>
+							<label><input type="radio" name="radio10" value="C">&nbsp;&nbsp;资产迅速增长</label>
+						</p>
+
+					<h3>五、风险偏好</h3>
+						<p class="que11">
+							<h5>1、以下哪项描述最符合您的投资态度？</h5>
+							<label><input type="radio" name="radio11" value="A">&nbsp;&nbsp;厌恶风险，不希望本金损失，希望获得稳定回报</label><br>
+							<label><input type="radio" name="radio11" value="B">&nbsp;&nbsp;保守投资，不希望本金损失，愿意承担一定幅度的收益波动</label><br>
+							<label><input type="radio" name="radio11" value="C">&nbsp;&nbsp;寻求资金的较高收益和成长性，愿意为此承担有限本金损失</label><br>
+							<label><input type="radio" name="radio11" value="D">&nbsp;&nbsp;希望赚取高回报，愿意为此承担较大本金损失(</label>
+						</p>
+						<p class="que12">
+							<h5>2、假设有两种投资：投资A预期获得10%的收益，可能承担的损失非常小；投资B预期获得30%的收益，但可能承担较大亏损。您会怎么支配您的投资</h5>
+							<label><input type="radio" name="radio12" value="A">&nbsp;&nbsp;全部投资于收益较小且风险较小的A</label><br>
+							<label><input type="radio" name="radio12" value="B">&nbsp;&nbsp;同时投资于A和B，但大部分资金投资于收益较小且风险较小的A</label><br>
+							<label><input type="radio" name="radio12" value="C">&nbsp;&nbsp;同时投资于A和B，但大部分资金投资于收益较大且风险较大的B</label><br>
+							<label><input type="radio" name="radio12" value="D">&nbsp;&nbsp;全部投资于收益较大且风险较大的B</label>
+						</p>
+						<p class="que13">
+							<h5>3、您认为自己能承受的最大投资损失是多少？</h5>
+							<label><input type="radio" name="radio13" value="A">&nbsp;&nbsp;10%以内</label><br>
+							<label><input type="radio" name="radio13" value="B">&nbsp;&nbsp;10%-30%</label><br>
+							<label><input type="radio" name="radio13" value="C">&nbsp;&nbsp;30%-50%</label><br>
+							<label><input type="radio" name="radio13" value="D">&nbsp;&nbsp;超过50%</label>
+						</p>
+				</div><!-- question end -->
+				
+				<div class="btn">
+					<input type="button" value="提交问卷" id="send_que">
+					<input type="reset" value="重新填写" class="cancel_que">
+				</div>
+				
+			</form>
+		</div>
+
+	</div>
+	
+
+	<script>
+			$('#send_que').click(function(){
+				/*获取input*/
+				var num1 = $('input[name="radio1"]');
+				var num2 = $('input[name="radio2"]');
+				var num3 = $('input[name="radio3"]');
+				var num4 = $('input[name="radio4"]');
+				var num5 = $('input[name="radio5"]');
+				var num6 = $('input[name="radio6"]');
+				var num7 = $('input[name="radio7"]');
+				var num8 = $('input[name="radio8"]');
+				var num9 = $('input[name="radio9"]');
+				var num10 = $('input[name="radio10"]');
+				var num11 = $('input[name="radio11"]');
+				var num12 = $('input[name="radio12"]');
+				var num13 = $('input[name="radio13"]');
+				
+				/*检测问题是否全部选中*/
+				if(!num1.is(':checked') || !num2.is(':checked') || !num3.is(':checked') || !num4.is(':checked') ||!num5.is(':checked') || !num6.is(':checked') || !num7.is(':checked') || !num8.is(':checked') || !num9.is(':checked') || !num10.is(':checked') || !num11.is(':checked') || !num12.is(':checked') || !num13.is(':checked')){
+
+					alert('请回答全部问题');
+				}
+				else{
+					/*将基本信息和答题的选项存入数组*/
+					var arr = [];
+					arr.push($('input[name=radio1]:checked').val());
+					arr.push($('input[name=radio2]:checked').val());
+					arr.push($('input[name=radio3]:checked').val());
+					arr.push($('input[name=radio4]:checked').val());
+					arr.push($('input[name=radio5]:checked').val());
+					arr.push($('input[name=radio6]:checked').val());
+					arr.push($('input[name=radio7]:checked').val());
+					arr.push($('input[name=radio8]:checked').val());
+					arr.push($('input[name=radio9]:checked').val());
+					arr.push($('input[name=radio10]:checked').val());
+					arr.push($('input[name=radio11]:checked').val());
+					arr.push($('input[name=radio12]:checked').val());
+					arr.push($('input[name=radio13]:checked').val());
+
+					/*弹出数组*/
+					/*alert(arr);	*/
+
+					/*跳转指定页面*/
+					window.location.href="../../finish_Reg/05_JQ/JQ.html";
+			}
+		});
+	</script>
+</body>
+</html>

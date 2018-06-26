@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问卷调查</title>
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="bg1"></div>
+
+		<div class="bg2">
+			<!-- 输入手机号码 -->
+			<div class="bg2-input">
+				<input class="Tel" type="text" name="Tel" id="phone" placeholder="请输入手机号码">
+				<input type="button" name="提交" id="btn1" >
+				<div id="info"></div>
+			</div>
+		</div>
+
+		<div class="bg3">
+			<div class="bg3-list">
+				<!-- 题目内容 -->
+				<form>
+					<div class="list-wrap">		
+						<li><input  type="radio" name="num1" value="A" id="num1_a"><label class="voteA" for="num1_a">A.香港</label></li>
+						<li><input  type="radio" name="num1" value="B" id="num1_b"><label class="voteB" for="num1_b">B.美国</label></li>
+						<li><input  type="radio" name="num1" value="C" id="num1_c"><label class="voteC" for="num1_c">C.日本</label></li>			
+					</div>
+
+					<div class="list-wrap">
+		
+						<li><input type="radio" name="num2" value="A" id="num2_a"><label class="voteA" for="num2_a">A.1968年</label></li>
+						<li><input type="radio" name="num2" value="B" id="num2_b"><label class="voteB" for="num2_b">B.1997年</label></li>
+						<li><input type="radio" name="num2" value="C" id="num2_c"><label class="voteC" for="num2_c">C.1969年</label></li>
+					</div>
+
+					<div class="list-wrap listwrap3">
+						<li><input type="radio" name="num3" value="A" id="num3_a"><label class="voteA" for="num3_a">A.25只</label></li>
+						<li><input type="radio" name="num3" value="B" id="num3_b"><label class="voteB" for="num3_b">B.50只</label></li>
+						<li><input type="radio" name="num3" value="C" id="num3_c"><label class="voteC" for="num3_c">C.300只</label></li>
+					</div>
+
+					<div class="list-wrap listwrap4">
+						<li><input type="radio" name="num4" value="A" id="num4_a"><label class="voteA" for="num4_a">A.256倍</label></li>
+						<li><input type="radio" name="num4" value="B" id="num4_b"><label class="voteB" for="num4_b">B.316倍</label></li>
+						<li><input type="radio" name="num4" value="C" id="num4_c"><label class="voteC" for="num4_c">C.258倍</label></li>
+					</div>
+
+					<div class="list-wrap listwrap5">
+						<li><input type="radio" name="num5" value="A" id="num5_a"><label class="voteA" for="num5_a">A.腾讯控股</label></li>
+						<li><input type="radio" name="num5" value="B" id="num5_b"><label class="voteB" for="num5_b">B.阿里巴巴</label></li>
+						<li><input type="radio" name="num5" value="C" id="num5_c"><label class="voteC" for="num5_c">C.苹果公司</label></li>
+					</div>
+					<!-- 提交答案 -->
+					<input type="button" name="提交" id="btn2">
+				</form>
+			</div>
+		</div>
+	</div>
+
+		<!-- 弹出框 -->
+		<!-- 正确率为0% -->
+		<div class="score active">
+			<img src="images/score1.png">
+		</div>
+		<!-- 正确率20% -->
+		<div class="score ">
+			<img src="images/score2.png">
+		</div>
+		<!-- 正确率40% -->
+		<div class="score ">
+			<img src="images/score3.png">
+		</div>
+		<!-- 正确率为60% -->
+		<div class="score ">
+			<img src="images/score4.png">
+		</div>
+		<!-- 正确率为80% -->
+		<div class="score ">
+			<img src="images/score5.png">
+		</div>
+		<!-- 正确率为100% -->
+		<div class="score ">
+			<img src="images/score6.png">
+		</div>
+
+		<!-- 弹出框后出现背景遮罩 -->
+		<div class="mask"></div>
+		<!-- 确定按钮 -->
+		<div class="btn3" >
+			<img src="images/btn3.png">
+		</div>
+		
+		<div class="btn4" id="btn4">
+			<a href="http://www.dcfund.com.cn/promote/2017/160924/index.html"><img src="images/btn4.png" alt="btn4"></a>
+		</div>
+		
+
+	<script src="JS/jquery.min.js"></script>
+	<!-- 有ajax -->
+	<script type="text/javascript" src="JS/server.js"></script>
+	<!-- 不带ajax -->
+	<!-- <script type="text/javascript" src="JS/default.js"></script> -->
+</body>
+</html>

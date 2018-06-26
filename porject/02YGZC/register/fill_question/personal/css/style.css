@@ -1,0 +1,440 @@
+		*{
+
+			padding:0;
+
+			margin:0;
+
+			font-family:"å¾®è½¯é›…é»‘";
+
+		}
+
+		body{
+
+			overflow:hidden;
+
+		}
+
+		.main{
+
+			position:absolute;
+
+			width:100%;
+
+			height:100%;
+
+			background:url(../images/bg.jpg) no-repeat;
+
+			background-size:100% 100%;
+
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg',sizingMethod='scale')/* å…¼å®¹IE9ä»¥ä¸‹ */
+
+		}
+
+		.home-btn{
+
+			display:block;
+
+			width:102px;
+
+			height:155px;
+
+			background:url(../images/home-btn.png) no-repeat;
+
+			position:absolute;
+
+			left:47.5%;
+
+			top:86.5%;
+
+		}
+
+
+
+
+
+		/* æ¡† */
+
+		.mainwrap{
+
+width:1200px;
+
+height: 595px;
+
+background:#fff;
+
+position:fixed;
+
+left:50%;
+
+margin-left:-600px;
+
+top:50%;
+
+margin-top: -298px;
+
+z-index:1003;
+
+border-radius:6px;
+
+}
+
+		/* é®ç½© */
+
+		.shadow{
+
+			background-color: #000000;
+
+		    bottom: 0;
+
+		    left: 0;
+
+		    margin: 0 auto;
+
+		    opacity: 0.4;
+
+		    position: fixed;
+
+		    right: 0;
+
+		    top: 0;
+
+		    width: 100%;
+
+		    z-index: 1002;
+
+		}
+
+		.mainwrap .main_top{
+
+width:1200px;
+
+height: 80px;
+
+border-bottom:1px solid #ccc;
+
+}
+
+
+
+		.mainwrap .main_top .step{
+
+			display:inline-block;
+
+			width:85px;
+
+			height:60px;
+
+			text-align:center;
+
+			margin-top:20px;
+
+		}
+
+		.mainwrap .main_top .step1{
+
+			margin-left:102px;
+
+		}
+
+		.mainwrap .main_top .step2{
+
+			margin-left:210px;
+
+		}
+
+		.mainwrap .main_top .step3{
+
+			margin-left:210px;
+
+		}
+
+		.mainwrap .main_top .step4{
+
+			margin-left:212px;
+
+		}
+
+
+
+
+
+		.mainwrap .main_top .step .number{
+
+			width:34px;
+
+			height:34px;
+
+			border-radius:50%;
+
+			line-height:34px;
+
+			text-align:center;
+
+			margin:0 auto;
+
+			margin-bottom:5px;
+
+			background:#c8cecf;
+
+			color:#fff;
+
+		}
+
+		.mainwrap .main_top .step .step_text{
+
+			font-size:12px;
+
+			color:#ccc;
+
+		}
+
+
+
+		/* ç¬¬äºŒæ­¥ */
+
+		.mainwrap .main_top .step .number_active{
+
+			width:34px;
+
+			height:34px;
+
+			border-radius:50%;
+
+			line-height:34px;
+
+			text-align:center;
+
+			margin:0 auto;
+
+			margin-bottom:5px;
+
+			background:#00a6ba;
+
+			color:#fff;
+
+		}
+
+		.mainwrap .main_top .step .step_text_active{
+
+			font-size:12px;
+
+			color:#00a6ba;
+
+		}/* ç¬¬äºŒæ­¥ç»“æŸ */
+
+
+
+		/* step_pic */
+
+		.mainwrap .main_top .step_pic1{
+
+			width:260px;
+
+			height:34px;
+
+			background:url(../images/step-pic.jpg) no-repeat 0 0;
+
+			position:absolute;
+
+			top:22px;
+
+			left:163px;
+
+		}
+
+		.mainwrap .main_top .step_pic2{
+
+			width:260px;
+
+			height:34px;
+
+			background:url(../images/step-pic.jpg) no-repeat 0 0;
+
+			position:absolute;
+
+			top:22px;
+
+			left:465px;
+
+		}
+
+		.mainwrap .main_top .step_pic3{
+
+			width:260px;
+
+			height:34px;
+
+			background:url(../images/step-pic.jpg) no-repeat 0 -34px;
+
+			position:absolute;
+
+			top:22px;
+
+			left:769px;
+
+		}
+
+
+
+
+
+
+
+		.main_section .section_top{
+
+			width:944px;
+
+			height:137px;
+
+			border-bottom:1px solid #ccc;
+
+			margin:0 auto;
+
+			overflow:hidden;
+
+		}
+
+		.section_top .title1{
+
+font-size:20px;
+
+margin-top: 10px;
+
+}
+
+		.title1_content1{
+
+text-indent:2em;
+
+font-size:14px;
+
+margin-top: 8px;
+
+line-height:1.5em;
+
+font-weight:bold;
+
+}
+
+		.title1_content2{
+
+text-indent:2em;
+
+font-size:14px;
+
+margin-top: 10px;
+
+}
+
+
+
+		/* é—®é¢˜ */
+
+		.main_section .question{
+
+width:944px;
+
+height: 300px;
+
+margin:0 auto;
+
+/* margin-top:20px; */
+
+overflow:auto;
+
+}
+
+		.question h3{
+
+			font-size:16px;
+
+			margin-top:20px;
+
+			color:#00a6ba;
+
+		}
+
+		.question h5{
+
+			font-size:14px;
+
+			margin-left:20px;
+
+			margin-bottom:10px;
+
+		}
+
+		.question p{
+
+			margin-top:15px;
+
+		}
+
+		.question label{
+
+			display:inline-block;
+
+			margin-bottom:10px;
+
+		}
+
+		.main_section .btn {
+
+			width:800px;
+
+			margin:0 auto;
+
+			text-align:center;
+
+		}
+
+		.main_section .btn input{
+
+display:inline-block;
+
+width:312px;
+
+height:42px;
+
+background:#00a6ba;
+
+line-height:42px;
+
+text-align:center;
+
+border:none;
+
+border-radius:3px;
+
+margin-top: 25px;
+
+margin-right:10px;
+
+color:#fff;
+
+text-decoration:none;
+
+cursor:pointer;
+
+}
+
+		.main_section .btn .cancel_que{
+
+			background:#c8cecf;
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+

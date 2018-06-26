@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大成基金</title>
+	<style type="text/css">
+		
+		/* CSS Document */
+		body {margin:0; padding:0; font:12px "\5B8B\4F53",san-serif;background:#fff;}
+		div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}  
+		table,td,tr,th{font-size:12px;}
+		li{list-style-type:none;}
+		img{vertical-align:top;border:0;}
+		ol,ul {list-style:none;}
+		h1,h2,h3,h4,h5,h6 {font-size:12px; font-weight:normal;}
+		address,cite,code,em,th {font-weight:normal; font-style:normal;}
+		.fB{font-weight:bold;}
+		.f12px{font-size:12px;}
+		.f14px{font-size:14px;}
+		.left{float:left;}
+		.right{float:right;}
+
+		a {color:#2b2b2b; text-decoration:none;}
+		a:visited {text-decoration:none;}
+		a:hover {color:#ba2636;text-decoration:underline;}
+		a:active {color:#ba2636;}
+		/* end css  */
+		body{
+			background-color:#005b9c;
+		}
+		.main_bg{
+			width:100%;
+			height:100%;
+			position:absolute;
+			
+		}
+		.main_bg .bg{ 
+			position: absolute;
+			top:-30px;
+			width: 100%						
+		 }
+		 .logo {
+			
+			position: absolute;
+			top:40px;
+			left: 40px;
+		
+		 }
+		.dl{
+			position: absolute;
+			top:63px;
+			left: 50%;
+			margin-left: -372px;
+		}
+		.moon{
+			position: absolute;
+			top:-18%;
+			left:35%;
+		}
+		.moon_bg{
+			position: absolute;
+			top:-21.5%;
+			left:33%;
+			opacity: .5
+		}
+		.tree{
+			position: absolute;
+			top:-90px;
+			left: 50%;
+			margin-left: -540px;
+		}
+		.hjxb{
+			position: absolute;
+			top:1%;
+			left:40%;
+			
+		}
+		.hdsy{
+			position: absolute;
+			top:40px;
+			right: 50px;
+			
+		}
+		.btn{
+			position: absolute;
+			bottom:10%;
+			left:50%;
+		}
+		.cloud{
+			position:absolute;
+			bottom:6%;
+			left:49%;
+
+		}
+		.rabbit{
+			position: absolute;
+			bottom:30%;
+			right:10%;
+			
+		}
+		.ta{
+			position: absolute;
+			bottom:0;
+			right:0;
+		}
+		.door{
+			position: absolute;
+			bottom:0;
+			left:0;
+		}
+		.flower1{
+			position: absolute;
+			top:0px;
+			left: 50%;
+			margin-left:-236px;
+		}
+		.flower2{
+			position: absolute;
+			top:1px;
+			left: 50%;
+			margin-left:-172px;
+		}
+		.flower3{
+			position: absolute;
+			top:29px;
+			left: 50%;
+			margin-left:-98px;
+		}
+		.flower4{
+			position: absolute;
+			top:0px;
+			left:50%;
+			margin-left:-170px;
+		}
+		.bottom_bg{
+			width:100%;
+			position:absolute;
+			bottom:0;
+		}
+		.title{
+			position:absolute;
+			bottom:40%;
+			left:30%;
+		}
+		.zhe{
+			position:absolute;
+			bottom:33%;
+			left:47%;
+		}
+		.date{
+			position:absolute;
+			bottom:1%;
+			left:47%;
+		}
+
+		/* CSS3动画 */
+
+		/* 灯笼 */
+		.dl{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:50% 0;
+			-webkit-animation:demo 3s 0s infinite ease-in-out normal none ;
+			} @-webkit-keyframes demo{
+			0%{
+			-webkit-transform:rotate(-12deg);
+			} 50%{
+			-webkit-transform:rotate(-3deg);
+			} 100%{
+			-webkit-transform:rotate(-12deg);
+			} 
+			}
+		.dl{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:50% 0;
+			-moz-animation:demo 3s 0s infinite ease-in-out normal none ;
+			} @-moz-keyframes demo{
+			0%{
+			-moz-transform:rotate(-12deg);
+			} 50%{
+			-moz-transform:rotate(-3deg);
+			} 100%{
+			-moz-transform:rotate(-12deg);
+			} 
+			}
+		.dl{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:50% 0;
+			-ms-animation:demo 3s 0s infinite ease-in-out normal none ;
+			} @-ms-keyframes demo{
+			0%{
+			-ms-transform:rotate(-12deg);
+			} 50%{
+			-ms-transform:rotate(-3deg);
+			} 100%{
+			-ms-transform:rotate(-12deg);
+			} 
+			}
+		/* 月亮背景 */
+		.moon_bg{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo2 4s 0s infinite ease normal none ;
+			} @-webkit-keyframes demo2{
+			0%{
+			opacity:0.3;
+			-webkit-transform:scaleX(0.98) scaleY(0.98);
+			} 50%{
+			opacity:0.6;
+			-webkit-transform:scaleX(1) scaleY(1);
+			} 100%{
+			opacity:0.3;
+			-webkit-transform:scaleX(0.98) scaleY(0.98);
+			} 
+			}
+		.moon_bg{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo2 4s 0s infinite ease normal none ;
+			} @-moz-keyframes demo2{
+			0%{
+			opacity:0.3;
+			-moz-transform:scaleX(0.98) scaleY(0.98);
+			} 50%{
+			opacity:0.6;
+			-moz-transform:scaleX(1) scaleY(1);
+			} 100%{
+			opacity:0.3;
+			-moz-transform:scaleX(0.98) scaleY(0.98);
+			} 
+			}
+		.moon_bg{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo2 4s 0s infinite ease normal none ;
+			} @-ms-keyframes demo2{
+			0%{
+			opacity:0.3;
+			-ms-transform:scaleX(0.98) scaleY(0.98);
+			} 50%{
+			opacity:0.6;
+			-ms-transform:scaleX(1) scaleY(1);
+			} 100%{
+			opacity:0.3;
+			-ms-transform:scaleX(0.98) scaleY(0.98);
+			} 
+			}
+		/* 了解详情按钮 */
+		.btn{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo3 3s 0s infinite ease normal none ;
+			} @-webkit-keyframes demo3{
+			0%{
+			-webkit-transform:translateY(0px);
+			} 50%{
+			-webkit-transform:translateY(20px) translateY(-10px);
+			} 100%{
+			-webkit-transform:translateY(0px);
+			} 
+			}
+		.btn{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo3 3s 0s infinite ease normal none ;
+			} @-moz-keyframes demo3{
+			0%{
+			-moz-transform:translateY(0px);
+			} 50%{
+			-moz-transform:translateY(20px) translateY(-10px);
+			} 100%{
+			-moz-transform:translateY(0px);
+			} 
+			}
+		.btn{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo3 3s 0s infinite ease normal none ;
+			} @-ms-keyframes demo3{
+			0%{
+			-ms-transform:translateY(0px);
+			} 50%{
+			-ms-transform:translateY(20px) translateY(-10px);
+			} 100%{
+			-ms-transform:translateY(0px);
+			} 
+			}
+		/* 云 */
+		.cloud{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo3 3s 0s infinite ease normal none ;
+			} @-webkit-keyframes demo3{
+			0%{
+			-webkit-transform:translateY(0px);
+			} 50%{
+			-webkit-transform:translateY(20px) translateY(-10px);
+			} 100%{
+			-webkit-transform:translateY(0px);
+			} 
+			}
+		.cloud{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo3 3s 0s infinite ease normal none ;
+			} @-moz-keyframes demo3{
+			0%{
+			-moz-transform:translateY(0px);
+			} 50%{
+			-moz-transform:translateY(20px) translateY(-10px);
+			} 100%{
+			-moz-transform:translateY(0px);
+			} 
+			}
+		.cloud{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo3 3s 0s infinite ease normal none ;
+			} @-ms-keyframes demo3{
+			0%{
+			-ms-transform:translateY(0px);
+			} 50%{
+			-ms-transform:translateY(20px) translateY(-10px);
+			} 100%{
+			-ms-transform:translateY(0px);
+			} 
+			}
+		/* 兔子 */
+		.rabbit{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:30% 100%;
+			-webkit-animation:demo4 2.5s 0s infinite ease normal none ;
+			} @-webkit-keyframes demo4{
+			0%{
+			-webkit-transform:rotate(7deg);
+			} 50%{
+			-webkit-transform:rotate(-7deg);
+			} 100%{
+			-webkit-transform:rotate(7deg);
+			} 
+			}
+		.rabbit{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:30% 100%;
+			-moz-animation:demo4 2.5s 0s infinite ease normal none ;
+			} @-moz-keyframes demo4{
+			0%{
+			-moz-transform:rotate(7deg);
+			} 50%{
+			-moz-transform:rotate(-7deg);
+			} 100%{
+			-moz-transform:rotate(7deg);
+			} 
+			}
+		.rabbit{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:30% 100%;
+			-ms-animation:demo4 2.5s 0s infinite ease normal none ;
+			} @-ms-keyframes demo4{
+			0%{
+			-ms-transform:rotate(7deg);
+			} 50%{
+			-ms-transform:rotate(-7deg);
+			} 100%{
+			-ms-transform:rotate(7deg);
+			} 
+			}
+
+		/* 飘落的花1 */
+		.flower1{
+			width: 20px;
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo5 3s 0s infinite ease-in normal none ;
+			} @-webkit-keyframes demo5{
+			0%{
+			opacity:;
+			-webkit-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-webkit-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower1{
+			width:20px;
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo5 3s 0s infinite ease-in normal none ;
+			} @-moz-keyframes demo5{
+			0%{
+			opacity:;
+			-moz-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-moz-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower1{
+			width:20px;
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo5 3s 0s infinite ease-in normal none ;
+			} @-ms-keyframes demo5{
+			0%{
+			opacity:;
+			-ms-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-ms-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+
+		/* 飘落的花2 */
+		.flower2{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo6 5s 0s infinite ease-in normal none ;
+			} @-webkit-keyframes demo6{
+			0%{
+			opacity:;
+			-webkit-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-webkit-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower2{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo6 5s 0s infinite ease-in normal none ;
+			} @-moz-keyframes demo6{
+			0%{
+			opacity:;
+			-moz-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-moz-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower2{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo6 5s 0s infinite ease-in normal none ;
+			} @-ms-keyframes demo6{
+			0%{
+			opacity:;
+			-ms-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-ms-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+
+		/* 飘落的花3*/
+		.flower3{
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo7 4s 0s infinite ease-in normal none ;
+			} @-webkit-keyframes demo7{
+			0%{
+			opacity:;
+			-webkit-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-webkit-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower3{
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo7 4s 0s infinite ease-in normal none ;
+			} @-moz-keyframes demo7{
+			0%{
+			opacity:;
+			-moz-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-moz-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower3{
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo7 4s 0s infinite ease-in normal none ;
+			} @-ms-keyframes demo7{
+			0%{
+			opacity:;
+			-ms-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-ms-transform:translateX(550px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+			
+		/* 飘落的花4 */
+		.flower4{
+			width: 20px;
+			-webkit-backface-visibility:visible;
+			-webkit-transform-origin:center center;
+			-webkit-animation:demo5 2.5s 0s infinite ease-in normal none ;
+			} @-webkit-keyframes demo5{
+			0%{
+			opacity:;
+			-webkit-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-webkit-transform:translateX(250px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower4{
+			width:20px;
+			-moz-backface-visibility:visible;
+			-moz-transform-origin:center center;
+			-moz-animation:demo5 2.5s 0s infinite ease-in normal none ;
+			} @-moz-keyframes demo5{
+			0%{
+			opacity:;
+			-moz-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-moz-transform:translateX(250px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+		.flower4{
+			width:20px;
+			-ms-backface-visibility:visible;
+			-ms-transform-origin:center center;
+			-ms-animation:demo5 2.5s 0s infinite ease-in normal none ;
+			} @-ms-keyframes demo5{
+			0%{
+			opacity:;
+			-ms-transform:translateX(-100px) translateX(-100px) translateY(0px);
+			} 100%{
+			opacity:.3;
+			-ms-transform:translateX(250px) translateY(700px);
+			} 71%{
+			opacity:1;
+			} 
+			}
+
+
+	</style>
+</head>
+<body>
+	<div class="main_bg">
+		<img class="bg" src="images/bg.jpg">
+		<a href="http://www.dcfund.com.cn/dcjj/index.jhtml"><img class="logo" src="images/logo.png" width="9%"></a>
+		<img class="moon_bg" src="images/moon_bg.png" width="36%" >
+		<img class="moon" src="images/moon.png" width="32%">
+		<img class="tree" src="images/tree.png">
+		<img class="dl" src="images/dl.png">
+		<img class="hjxb" src="images/hjxb.png" width="25%">
+		<a href="http://www.dcfund.com.cn/dcjj/index.jhtml"><img class="hdsy" src="images/hdsy.png" width="9%"></a>
+		<img class="cloud" src="images/cloud.png" width="10%">
+		<a href="http://www.dcfund.com.cn/promote/2016/Marketing/index.html"><img class="btn" src="images/btn.png" width="8%"></a>	
+		<img class="rabbit" src="images/rabbit.png" width="12%">
+		<img class="ta" src="images/ta.png" width="27%">
+		<img class="door" src="images/door.png" width="42%">
+		<img class="flower1" src="images/flower1.png">
+		<img class="flower2" src="images/flower2.png">
+		<img class="flower3" src="images/flower3.png">
+		<img class="flower4" src="images/flower4.png">
+		<img class="bottom_bg" src="images/bottom_bg.png">
+		<img class="title" src="images/title.png" width="45%">	
+		<img class="zhe" src="images/zhe.png" width="12%">	
+		<img class="date" src="images/date.png" width="15%">
+	</div>
+	
+</body>
+</html>

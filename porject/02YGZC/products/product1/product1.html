@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旗下产品</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/products.js"></script>
+
+</head>
+<body>
+	
+	<!-- head -->
+	<div class="head">
+		<div class="head-wrap">
+			<div class="logo">
+				<a href="../../home/home.html"><img src="images/logo.png" alt="允公资产"></a>
+			</div>
+			<ul class="nav">
+				<li><a href="../../home/home.html">首页</a></li>
+				<li><a href="../../summary/summary.html">走进允公</a></li>
+				<li ><a href="../../news/news1/news1.html">允公资讯</a></li>
+				<li><a href="javascript:;" class="active">旗下产品</a></li>
+				<li><a href="../../membercenter/myaccount/allproducts/allproducts.html">会员中心</a></li>
+			</ul>
+			<!-- 登录过后图标 -->
+			<div class="person" id="person">
+				<div class="person-logo">陆军</div>
+
+				<div class="person-list" id="personList" style="display:none">
+					<a href="../../membercenter/myaccount/allproducts/allproducts.html">我的账户</a>
+					<a href="../../membercenter/useraccount/userinfo/userinfo.html">账号管理</a>
+					<a href="../../login/login.html">退出账号</a>
+				</div>
+			</div>
+
+			<script>
+				var oPerson = document.getElementById("person");
+				var oPersonList = document.getElementById("personList");
+				
+				oPerson.onmouseover = function(){
+					oPersonList.style.display = "block";
+				};
+
+				oPerson.onmouseout = function(){
+					oPersonList.style.display = "none";
+				};
+			</script>
+		</div>
+	</div><!-- head end -->
+
+	<!-- banner -->
+	<div class="banner">
+		<img src="images/banner.jpg" alt="" width="100%">
+	</div>
+
+	<!-- pagenav -->
+	<div class="pagenav">
+		<a href="../../home/home.html"><span class="home-icon"></span>首页</a> 
+		>
+		<a href="javascript:;" class="product">旗下产品</a>
+	</div>
+
+	<!-- section1 -->
+	<div class="section1">
+		<div class="section1-wrap">
+			<div class="products">
+				<div class="tabshow">			 
+					<!-- tabshow-left -->
+					<div class="tabshow-left">
+						<a href="javascript:void(0);" class="udbtn uPrev"></a>
+						<div class="tabTagBox">
+							<ul class="tabTagList">
+								<li id="tag01" class="current">慧享系列</li>
+								<li id="tag02">鑫享系列</li>
+							</ul>
+						</div>
+						<a href="javascript:void(0);" class="udbtn dNext"></a>
+					</div>
+					
+					<!-- tabshow-right -->
+					<div class="tabshow-right">
+						
+						<!-- 慧享系列 -->
+						<div class="tabcon ">
+							<li class="title">
+								<span class="name">产品名称</span><span class="code">产品代码</span><span class="date">净值日期</span><span class="value">净值</span><span class="bulid">成立时间</span><span class="caozuo">操作</span>
+							</li>
+
+							<li>
+								<span class="name">慧享精选6号</span><span class="code">SL6134</span><span class="date">2016-12-30</span><span><a href="../../membercenter/myaccount/allproducts/allproducts.html" class="view">查看</a></span><span class="time">2016-09-13</span><span><a href="javascript:;" class="order" id="order" onclick = "showbox()">预约</a></span>
+							</li>												
+						</div>
+						
+						<!-- 鑫享系列 -->
+						<div class="tabcon hide">
+							<li class="title">
+								<span class="name">产品名称</span><span class="code">产品代码</span><span class="date">净值日期</span><span class="value">净值</span><span class="bulid">成立时间</span><span class="caozuo">操作</span>
+							</li>
+
+							<li>
+								<span class="name">鑫享8号</span><span class="code">SM9816</span><span class="date">2016-12-30</span><span><a href="../../membercenter/myaccount/allproducts/allproducts.html" class="view">查看</a></span><span class="time">2016-11-09</span><span><a href="javascript:;" class="order" id="order" onclick = "showbox()">预约</a></span>
+							</li>				
+						</div>	
+
+					</div>	
+				</div><!--tabshow end-->
+			
+			</div><!-- our products end  -->
+
+			<!-- 页码 -->
+		     <!--  <ul class="pagecode">
+		     		<li><a href="javascript:;" class="top-btn"></a></li>
+		     		<li><a href="javascript:;" class="pre-btn"></a></li>
+		     
+		     		<li><a href="javascript:;" style="background:#179eae;color:#fff">1</a></li>
+		     		<li><a href="../product2/product2.html" style="background:#eee">2</a></li>
+		     		<li><a href="../product3/product3.html" style="background:#eee">3</a></li>
+		     		<li><a href="../product4/product4.html" style="background:#eee">···</a></li>
+		     
+		     		<li><a href="../product2/product2.html" class="next-btn"></a></li>
+		     		<li><a href="../product6/product6.html" class="last-btn"></a></li>
+		     </ul>	 -->
+		</div>
+	</div><!-- section1 end -->
+	
+<!-- 预约弹出框 -->
+	<div class="boxwrap" id="boxwrap" style="display:none">
+		<div class="shadow" ></div>
+		<div class="orderbox">
+			<form action="" method="post" name="baseinfo">
+				<p class="name"><span class="name-icon"></span><input type="text" name="usename" value="" placeholder="姓名"></p>
+		
+				<p class="phone"><span class="phone-icon"></span><input type="" name="phone" value="" placeholder="手机"></p>
+
+				<p class="email"><span class="email-icon"></span><input type="email" name="email" value="" placeholder="邮箱"></p>
+			
+				<div class="btn">
+					<input type="submit" value="确定" class="ok" id="ok">
+					<input type="reset" value="取消" class="cancel" id="cancel">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- 预约弹出框 -->
+	<script>
+		var oBoxwrap = document.getElementById("boxwrap");
+
+		var oOrder = document.getElementById("order");
+		var oOk = document.getElementById("ok");
+		var oCancel = document.getElementById("cancel");
+
+		function showbox(){
+			oBoxwrap.style.display = "block";
+		};
+
+		oOk.onclick = function(){
+			oBoxwrap.style.display = "none";
+		};
+		oCancel.onclick = function(){
+			oBoxwrap.style.display = "none";	
+		};
+
+	</script>
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-wrap">
+			<div class="footer-left">
+				<div class="footer-nav">
+					<a href="../../home/home.html">首页</a><span>|</span><a href="../../summary/summary.html">走进允公</a><span>|</span><a href="../../news/news1/news1.html">允公资讯</a><span>|</span><a href="javascript:;">旗下产品</a><span>|</span><a href="../../membercenter/myaccount/allproducts/allproducts.html">会员中心</a><span>|</span><a href="../../summary/recruitment/recruitment.html">人才招聘</a><span>|</span><a href="../../summary/contact/contact.html">联系我们</a>
+				</div>
+
+				<div class="link">
+					<p class="p1">地址：上海市浦东新区银城中路501号上海中心大厦3107室</p>
+					<p class="p2"><span class="phone">电话：021-58567018</span><span class="mailcode">邮编：200120</span></p>
+				</div>
+
+				<p class="copyright">2016 © 上海允公资产管理有限公司 版权所有沪ICP备##########号</p>
+			</div>
+
+			<div class="footer-right"></div>
+		</div>
+	</div><!-- footer end -->
+
+
+	<!--to-top-->
+	<a href="javascript:void(0)" class="to-top"></a>
+
+	<!-- to-top -->
+	<script>
+		(function( $ ){'use strict';
+		    
+		    $.fn.toTop = function(opt){
+		        
+		        //variables
+		        var elem = this;
+		        var win = $(window);
+		        var doc = $('html, body');
+		        
+		        //Extended Options
+		        var options = $.extend({
+		            autohide: true,
+		            offset: 420, 
+		            speed: 500,
+		            position: true,
+		        
+		        }, opt);
+		        
+
+		        elem.css({
+		            'cursor': 'pointer' /*鼠标移入返回顶部按钮显示小手*/
+		        });
+		        
+		        if(options.autohide){
+		            elem.css('display', 'none');
+		        }
+		        
+		        if(options.position){
+		            elem.css({
+		                'position': 'fixed',
+		                'right': options.right,
+		                'bottom': options.bottom,
+		            });
+		        }
+		        
+		        /*通过CSS动画来返回到页面顶部*/
+		        elem.click(function(){
+		            doc.animate({scrollTop: 0}, options.speed);
+		        });
+		        
+		        /*返回顶部按钮淡入淡出效果*/
+		        win.scroll(function(){
+		            var scrolling = win.scrollTop();
+		            if(options.autohide){
+		                if(scrolling > options.offset){
+		                    elem.fadeIn();/*加上options.speed 速度与滚动条速度同步*/
+		                }
+		                else 
+		                    elem.fadeOut();
+		            }
+		            
+		        });
+		        
+		    };
+		    
+		}( jQuery ));
+	</script>
+	<!-- to-top -->
+	<script>
+		$(function() {
+			$('.to-top').toTop({
+				/*此处添加参数*/
+				speed:500,
+				offset: 200, 
+			});
+
+		});
+	</script>
+	
+</body>
+</html>

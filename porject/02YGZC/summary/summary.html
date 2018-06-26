@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>允公资讯</title>
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+	
+	<!-- head -->
+	<div class="head">
+		<div class="head-wrap">
+			<div class="logo">
+				<a href="../home/home.html"><img src="images/logo.png" alt="允公资产"></a>
+			</div>
+			<ul class="nav">
+				<li><a href="../home/home.html">首页</a></li>
+				<li class="active"><a href="javascript:;">走进允公</a></li>
+				<li><a href="../news/news1/news1.html">允公资讯</a></li>
+				<li><a href="../products/product1/product1.html">旗下产品</a></li>
+				<li><a href="../membercenter/myaccount/allproducts/allproducts.html">会员中心</a></li>
+			</ul>
+			<!-- 登录过后图标 -->
+			<div class="person" id="person">
+				<div class="person-logo">陆军</div>
+
+				<div class="person-list" id="personList" style="display:none">
+					<a href="../membercenter/myaccount/allproducts/allproducts.html">我的账户</a>
+					<a href="../membercenter/useraccount/userinfo/userinfo.html">账号管理</a>
+					<a href="../login/login.html">退出账号</a>
+				</div>
+			</div>
+
+			<script>
+				var oPerson = document.getElementById("person");
+				var oPersonList = document.getElementById("personList");
+				
+				oPerson.onmouseover = function(){
+					oPersonList.style.display = "block";
+				};
+
+				oPerson.onmouseout = function(){
+					oPersonList.style.display = "none";
+				};
+			</script>
+		</div>
+	</div><!-- head end -->
+
+	<!-- banner -->
+	<div class="banner">
+		<img src="images/banner.jpg" alt="" width="100%">
+	</div>
+
+	<!-- pagenav -->
+	<div class="pagenav">
+		<a href="../home/home.html"><span class="home-icon"></span>首页</a> 
+		>
+		<a href="javascript:;" class="news">走进允公</a>
+		>
+		<a href="javascript:;" class="product">允公简介</a>
+	</div>
+
+	<!-- section1 -->
+	<div class="section1">
+		<div class="section1-wrap">
+			<ul class="title">
+				<li class="li-margin"><a href="" class="active">允公简介</a></li>
+				<li class="li-margin"><a href="idea/idea.html">投资理念</a></li>
+				<li class="li-margin"><a href="recruitment/recruitment.html">人才招聘</a></li>
+				<li><a href="contact/contact.html">联系我们</a></li>
+			</ul>
+			<!-- company-profile -->
+			<div class="company-profile">
+				<div class="profile-left">
+					<h1>公司简介</h1>
+					<div class="line"></div>
+					<img src="images/map.png" alt="map.png">
+				</div>
+				<p class="profile-right">上海允公资产管理有限公司成立于2015年09月28日，坐落于上海陆家嘴金融商圈地标性建筑上海中心大厦内，于2016年6月6日完成中国证券投资基金业协会登记注册工作（登记编号P1031600），注册资本3000万，经营范围包括投资管理、资产管理，是一家为客户提供专业证券投资服务的资产管理机构。</p>
+			</div>
+			<!-- our-group -->
+			<div class="our-group">
+				<div class="group-left">
+					<h1>我们的团队</h1>
+					<div class="line"></div>
+
+					<div class="text">
+						<p class="p1">我们是-支专业的团队。我们的成员拥有多年的并购市场及定增领域研究背景，来自国内外知名并购企业精英。</p>
+						<p>我们是-支年轻的团队。充满了朝气和创新精神。</p>
+						<p>我们是-支专注的团队。我们坚信，只有专注，才能做到为客户资产不断增值。</p>
+						<p>我们是-支有梦想的团队。我们来自五湖四海，因为一个共同的梦想:做一家真正创造精品的金融私募企业，为客户提供安全收益的产品。</p>
+					</div>
+				</div>
+				<div class="group-right">
+					<img src="images/group2.jpg" alt="group2.jpg" width="490px" height="317px">
+				</div>
+			</div>
+		</div>
+	</div><!-- section1 end -->
+	
+	<!-- section2 --> 
+	<div class="section2">
+		<div class="section2-wrap">
+			<h1>企业文化</h1>
+			<div class="line"></div>
+
+			<div class="section2-bottom">
+				<div class="pic-wrap1">
+					<div class="pic1" id="pic1"></div>
+					<p class="p1">定位</p>
+					<p class="p2">创造精品私募金融企业</p>
+				</div>
+				<div class="pic-wrap2">
+					<div class="pic2" id="pic2" onmouseover="show1()" onmouseout="hide1()"></div>
+					<p class="p1">理念</p>
+					<p class="p2">诚信、敬业、务实、创新</p>
+				</div>
+				<div class="pic-wrap3" >
+					<div class="pic3" id="pic3" onmouseover="show1()" onmouseout="hide1()"></div>
+					<p class="p1">目标</p>
+					<p class="p2">创造价值、发现价值</p>
+				</div>
+				<div class="pic-wrap4" >
+					<div class="pic4" id="pic4" onmouseover="show1()" onmouseout="hide1()"></div>
+					<p class="p1">使命</p>
+					<p class="p2">成就客户、成就品牌、成就员工</p>
+				</div>
+			</div>
+			<script>
+				var oPic1 = document.getElementById("pic1");
+				function show1(){
+					oPic1.style.backgroundImage="url(images/2-1.png)";
+				};
+				function hide1(){
+					oPic1.style.backgroundImage="url(images/1-1.png)";
+				};
+			</script>
+
+		</div>
+	</div><!-- ection2 end -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-wrap">
+			<div class="footer-left">
+				<div class="footer-nav">
+					<a href="../home/home.html">首页</a><span>|</span><a href="">走进允公</a><span>|</span><a href="../news/news1/news1.html">允公资讯</a><span>|</span><a href="../products/product1/product1.html">旗下产品</a><span>|</span><a href="../membercenter/myaccount/allproducts/allproducts.html">会员中心</a><span>|</span><a href="recruitment/recruitment.html">人才招聘</a><span>|</span><a href="contact/contact.html">联系我们</a>
+				</div>
+
+				<div class="link">
+					<p class="p1">地址：上海市浦东新区银城中路501号上海中心大厦3107室</p>
+					<p class="p2"><span class="phone">电话：021-58567018</span><span class="mailcode">邮编：200120</span></p>
+				</div>
+
+				<p class="copyright">2016 © 上海允公资产管理有限公司 版权所有沪ICP备##########号</p>
+			</div>
+
+			<!-- 二维码 -->
+			<!-- <div class="footer-right"></div> -->
+		</div>
+	</div><!-- footer end -->
+
+	<!--to-top-->
+	<a href="javascript:void(0)" class="to-top"></a>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<!-- to-top -->
+	<script>
+		(function( $ ){'use strict';
+		    
+		    $.fn.toTop = function(opt){
+		        
+		        //variables
+		        var elem = this;
+		        var win = $(window);
+		        var doc = $('html, body');
+		        
+		        //Extended Options
+		        var options = $.extend({
+		            autohide: true,
+		            offset: 420, 
+		            speed: 500,
+		            position: true,
+		        
+		        }, opt);
+		        
+
+		        elem.css({
+		            'cursor': 'pointer' /*鼠标移入返回顶部按钮显示小手*/
+		        });
+		        
+		        if(options.autohide){
+		            elem.css('display', 'none');
+		        }
+		        
+		        if(options.position){
+		            elem.css({
+		                'position': 'fixed',
+		                'right': options.right,
+		                'bottom': options.bottom,
+		            });
+		        }
+		        
+		        /*通过CSS动画来返回到页面顶部*/
+		        elem.click(function(){
+		            doc.animate({scrollTop: 0}, options.speed);
+		        });
+		        
+		        /*返回顶部按钮淡入淡出效果*/
+		        win.scroll(function(){
+		            var scrolling = win.scrollTop();
+		            if(options.autohide){
+		                if(scrolling > options.offset){
+		                    elem.fadeIn();/*加上options.speed 速度与滚动条速度同步*/
+		                }
+		                else 
+		                    elem.fadeOut();
+		            }
+		            
+		        });
+		        
+		    };
+		    
+		}( jQuery ));
+	</script>
+	<!-- to-top -->
+	<script>
+		$(function() {
+			$('.to-top').toTop({
+				/*此处添加参数*/
+				speed:500,
+				offset: 1000, 
+			});
+
+		});
+	</script>
+
+	
+</body>
+</html>

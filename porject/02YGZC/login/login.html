@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>允公资产</title>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	
+	<!-- head -->
+	<div class="head">
+		<div class="head-wrap">
+			<div class="logo">
+				<a href="../home/home.html"><img src="images/logo.png" alt="允公资产"></a>
+			</div>
+			<div class="title"></div>			
+		</div>
+	</div><!-- head end -->
+
+	<!-- banner -->
+	<div class="banner">
+		<img src="images/banner.jpg" alt="" width="100%">
+	</div>
+
+	<div class="login-wrap">
+		<form action="xxx.php" method="post" class="login-form">
+			<div class="content">
+				<p class="title">会员登录</p>
+				<!-- 表单 -->
+				<div class="login">
+					<p class="p1">
+						<i class="icon1"></i>
+						<input type="text" class="username" required="required" name="username" onkeyup="value=value.replace(/[^0-9]/g,'');"; placeholder="姓名/手机号"  title="请输入账号">
+					</p>
+					<p class="p2">
+						<i class="icon2"></i>
+						<input type="password" name="password" required="required" placeholder="请输入6位数以上密码"  title="请输入密码">
+					</p>
+					<p class="p3">
+						<input type="text" placeholder="请输入验证码" required="required" name="code"  title="请输入验证码">
+						<img src="images/code.jpg" alt="验证码" title="点击刷新"  onclick="document.getElementById('captcha').src='/captcha/index/'+Math.random();" src="/captcha/index/0.08025682970692727">
+
+					</p>
+				</div>
+				<!-- 问题 -->
+				<div class="question">
+				
+					<a href="../findpwbyphone/findpwbyphone.html" class="a2">忘记密码？</a>
+				</div> 
+				<!-- 登录 -->
+				<a href="../membercenter/myaccount/allproducts/allproducts.html"><input type="button" name="submit" value="登 录" class="load"></a><!--  type="submit" 此处需要后台判断进入会员中心-->
+			</div>
+		</form>
+	</div>
+
+	
+
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-wrap">
+			<div class="footer-left">
+				<div class="footer-nav">
+					<a href="../home/home.html">首页</a><span>|</span><a href="../summary/summary.html">走进允公</a><span>|</span><a href="../news/news1/news1.html">允公资讯</a><span>|</span><a href="../products/product1/product1.html">旗下产品</a><span>|</span><a href="">会员中心</a><span>|</span><a href="../summary/recruitment/recruitment.html">人才招聘</a><span>|</span><a href="../summary/contact/contact.html">联系我们</a>
+				</div>
+
+				<div class="link">
+					<p class="p1">地址：上海市浦东新区银城中路501号上海中心大厦3107室</p>
+					<p class="p2"><span class="phone">电话：021-58567018</span><span class="mailcode">邮编：200120</span></p>
+				</div>
+
+				<p class="copyright">2016 © 上海允公资产管理有限公司 版权所有沪ICP备##########号</p>
+			</div>
+
+			<!-- 二维码 -->
+			<!-- <div class="footer-right"></div> -->
+		</div>
+	</div><!-- footer end -->
+
+	
+</body>
+</html>

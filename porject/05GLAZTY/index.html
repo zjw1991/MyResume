@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>国联安-沃海宝</title>
+	<style>
+		body{
+			overflow-x:hidden;
+		}
+		*{
+			padding:0;
+			margin:0;
+		}
+		.banner{
+			width:1920px;
+			height:840px;
+			background:url(images/banner.jpg) no-repeat;
+			position:relative;
+			left:50%;
+			margin-left:-960px;
+			overflow:hidden;
+		}
+		.banner a{
+			display:inline-block;
+			width:229px;
+			height:50px;
+		}
+ 		.banner .btn{
+			margin-left:565px;
+			margin-top:700px;
+		} 
+		.banner .btn1{
+			background:url(images/openaccount.png) no-repeat;
+		}
+		.banner .btn2{
+			background:url(images/makedeal.png) no-repeat;
+			margin:0 45px 0 45px;
+		}
+		.banner .btn3{
+			background:url(images/info.png) no-repeat;
+		}
+		.section1{
+			width:970px;
+			height:862px;
+			background:url(images/section1.jpg) no-repeat;
+			position:relative;
+			left:50%;
+			margin-left:-485px;
+
+		}
+		.section1 span{
+			display:inline-block;
+			width:200px;
+			height:200px;
+			margin-top:475px;
+			cursor:pointer;
+		}
+		#span1{
+			margin-left:70px;
+		}
+		#span2{
+			margin-left:100px;
+		}
+		#span3{
+			margin-left:110px;
+		}
+		#pic1{
+			position:absolute;
+			top:400px;
+			margin-left:50px;
+			display:none;
+		}
+		#pic2{
+			position:absolute;
+			top:400px;
+			margin-left:355px;
+			display:none;
+		}
+		#pic3{
+			position:absolute;
+			top:400px;
+			margin-left:670px;
+			display:none;
+		}
+		.section2{
+			width:970px;
+			height:997px;
+			background:url(images/section2.jpg) no-repeat;
+			margin:0 auto;
+		}
+		.section3{
+			width:970px;
+			height:636px;
+			background:url(images/section3.jpg) no-repeat;
+			margin:0 auto;
+		}
+		.section4{
+			width:970px;
+			height:860px;
+			background:url(images/section4.jpg) no-repeat;
+			margin:0 auto;
+		}
+		.footer1{
+			width:970px;
+			height:199px;
+			background:url(images/footer1.jpg) no-repeat;
+			margin:0 auto;
+		}
+		.footer2{
+			width:970px;
+			height:70px;
+			background:url(images/footer2.jpg) no-repeat;
+			position:fixed;
+			bottom:0%;
+			left:50%;
+			margin-left:-485px;
+			display:none;
+		}
+
+		/* 悬浮按钮 */
+		.fixed-btn{
+			position:fixed;
+			left:50%;
+			margin-left:445px;
+			top:70px;
+			display:none;
+		}
+		.fixed-btn a{
+			display:block;
+		}
+
+		/* 项目合作协议 */
+		.bombbox1{
+			width:778px;
+			height:790px;
+			background:url(images/bombbox-bg1.png) no-repeat;
+			position:fixed;
+			top:0px;
+			left:50%;
+			margin-left:-370px;
+			display:none;
+
+		}
+		.bombbox1 .close{
+			width:90px;
+			height:90px;
+			cursor:pointer;
+			position:absolute;
+			right:0;
+		}
+		.bombbox1-content-wrap{
+			width:720px;
+			height:670px;
+			overflow:auto;
+			margin-top:80px;
+		}
+		.bombbox1-content{
+			width:595px;
+			height:auto;
+			margin-left:50px;
+		}
+	
+		/* 计划费用协议内容 */
+		.bombbox2{
+			width:778px;
+			height:790px;
+			background:url(images/bombbox-bg.png) no-repeat;
+			position:fixed;
+			top:0px;
+			left:50%;
+			margin-left:-370px;
+			display:none;
+
+		}
+		.bombbox2 .close{
+			width:90px;
+			height:90px;
+			cursor:pointer;
+			position:absolute;
+			right:0;
+		}
+		.bombbox2-content-wrap{
+			width:720px;
+			height:670px;
+			overflow:auto;
+			margin-top:80px;
+		}
+		.bombbox2-content{
+			width:595px;
+			height:auto;
+			margin-left:50px;
+		}
+
+		/* 汇款专用账户内容 */
+		.bombbox3{
+			width:778px;
+			height:790px;
+			background:url(images/bombbox-bg2.png) no-repeat;
+			position:fixed;
+			top:0px;
+			left:50%;
+			margin-left:-370px;
+			display:none;
+
+		}
+		.bombbox3 .close{
+			width:90px;
+			height:90px;
+			cursor:pointer;
+			position:absolute;
+			right:0;
+		}
+		.bombbox3-content-wrap{
+			width:720px;
+			height:670px;
+			overflow:auto;
+			margin-top:80px;
+		}
+		.bombbox3-content{
+			width:595px;
+			height:auto;
+			margin-left:50px;
+		}
+
+
+		@media only screen and (min-device-width: 414px) and (max-device-width: 736px){
+			.banner{
+				position:relative;
+				left:50%;
+				margin-left:-630px;
+			}
+			.section1{
+				position:relative;
+				left:50%;
+				margin-left:-148px;
+			}
+			.section2{
+				position:relative;
+				left:50%;
+				margin-left:-148px;
+			}
+			.section3{
+				position:relative;
+				left:50%;
+				margin-left:-148px;
+			}
+			.section4{
+				position:relative;
+				left:50%;
+				margin-left:-148px;
+			}
+			.footer1{
+				position:relative;
+				left:50%;
+				margin-left:-148px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+<!-- banner -->
+	<div class="banner">
+		<div class="btn">
+			<!-- <a href="https://trade.gtja-allianz.com/webapp/index.jsp" target="_blank" class="btn1"></a>我要开户 -->
+			<a href="http://www.gtja-allianz.com/popup/20161114/201611141.html" target="_blank" class="btn2"></a><!-- 交易规则 -->
+			<a href="http://www.gtja-allianz.com/popup/20161114/201611142.html" target="_blank" class="btn3"></a><!-- 投资人须知 -->
+		</div>
+	</div>
+<!-- section -->
+	<div class="section1">
+			<span id="span1" onmouseover="pic1show()" ></span>
+			<span id="span2" onmouseover="pic2show()"></span>
+			<span id="span3" onmouseover="pic3show()"></span>
+		<div class="pic">
+			<img src="images/liantong.jpg" alt="" id="pic1" onmouseout="pic1hidden()">
+			<img src="images/shanggao.jpg" alt="" id="pic2" onmouseout="pic2hidden()">
+			<img src="images/guolianan.jpg" alt="" id="pic3" onmouseout="pic3hidden()">
+		</div>
+	</div>
+		<!-- section1-js -->
+		<script>
+			var oPic1 = document.getElementById("pic1");
+			var oPic2 = document.getElementById("pic2");
+			var oPic3 = document.getElementById("pic3");
+
+			/*pic1*/
+			function pic1show(){
+				oPic1.style.display = "block";
+			};
+			function pic1hidden(){
+				oPic1.style.display = "none";
+			};
+
+			/*pic2*/
+			function pic2show(){
+				oPic2.style.display = "block";
+			};
+			function pic2hidden(){
+				oPic2.style.display = "none";
+			};
+
+			/*pic3*/
+			function pic3show(){
+				oPic3.style.display = "block";
+			};
+			function pic3hidden(){
+				oPic3.style.display = "none";
+			};
+
+		</script>
+	<div class="section2"></div>
+	<div class="section3"></div>
+	<div class="section4"></div>
+	<div class="footer1"></div>
+	<div class="footer2" id="footer2"></div>
+
+	<!-- 右边浮动按钮 -->
+	<div class="fixed-btn" id="fixed-btn">
+		<a href="javascript:;" onclick="bombbox1show()"><img src="images/XMHZXY.png" alt=""></a><!-- 项目合作协议 -->
+		<a href="javascript:;" onclick="bombbox2show()"><img src="images/JHFY.png" alt=""></a><!-- 计划费用协议 -->
+		<a href="javascript:;" onclick="bombbox3show()"><img src="images/HKZY-btn.png" alt=""></a><!-- 汇款专用账户 -->
+	</div>
+
+	<!-- 1项目合作协议 -->
+	<div class="bombbox1" id="bombbox1">
+		<div class="close" id="close" onclick = "bombbox1close()"></div><!-- 关闭按钮 -->
+		<div class="bombbox1-content-wrap">
+			<div class="bombbox1-content">
+				<img src="images/XMPIC1.jpg" alt="">
+				<img src="images/XMPIC2.jpg" alt="">
+				<img src="images/XMPIC3.jpg" alt="">
+				<img src="images/XMPIC4.jpg" alt="">
+				<img src="images/XMPIC5.jpg" alt="">
+				<img src="images/XMPIC6.jpg" alt="">
+				<img src="images/XMPIC7.jpg" alt="">
+				<img src="images/XMPIC8.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+	<!-- 2计算费用协议框 -->
+	<div class="bombbox2" id="bombbox2" >
+		<div class="close" id="close" onclick = "bombbox2close()"></div><!-- 关闭按钮 -->
+		<div class="bombbox2-content-wrap">
+			<div class="bombbox2-content">
+				<img src="images/JHpic1.jpg" alt="">
+				<img src="images/JHpic2.jpg" alt="">
+				<img src="images/JHpic3.jpg" alt="">
+				<img src="images/JHpic4.jpg" alt="">
+				<img src="images/JHpic5.jpg" alt="">
+				<img src="images/JHpic6.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+	<!-- 3汇款专用账户 -->
+	<div class="bombbox3" id="bombbox3" >
+		<div class="close" id="close" onclick = "bombbox3close()"></div><!-- 关闭按钮 -->
+		<div class="bombbox3-content-wrap">
+			<div class="bombbox3-content">
+				<img src="images/HKZY.png" alt="">
+			</div>
+		</div>
+	</div>
+	
+<!-- 显示 -->
+	<!-- 点击显示项目合作协议 -->
+	<script>
+		var oBombbox1 = document.getElementById("bombbox1");
+		var oBombbox2 = document.getElementById("bombbox2");
+		var oBombbox3 = document.getElementById("bombbox3");
+		function bombbox1show(){
+			oBombbox1.style.display = "block"
+			oBombbox2.style.display = "none"
+			oBombbox3.style.display = "none"
+		};
+	</script>
+
+	<!-- 点击显示计算费用协议框 -->
+	<script>
+		var oBombbox1 = document.getElementById("bombbox1");
+		var oBombbox2 = document.getElementById("bombbox2");
+		var oBombbox3 = document.getElementById("bombbox3");
+		function bombbox2show(){
+			oBombbox1.style.display = "none"
+			oBombbox2.style.display = "block"
+			oBombbox3.style.display = "none"
+		};
+	</script>
+	<!-- 点击显示汇款专用账户框 -->
+	<script>
+		var oBombbox1 = document.getElementById("bombbox1");
+		var oBombbox2 = document.getElementById("bombbox2");
+		var oBombbox3 = document.getElementById("bombbox3");
+		function bombbox3show(){
+			oBombbox1.style.display = "none"
+			oBombbox2.style.display = "none"
+			oBombbox3.style.display = "block"
+		};
+	</script>
+
+<!-- 关闭 -->
+	<script>
+		/*点击关闭项目合作协议*/
+		var oBombbox1 = document.getElementById("bombbox1");
+		function bombbox1close(){
+			oBombbox1.style.display = "none";
+		};
+	</script>
+	<script>
+		/*点击关闭计算费用协议框*/
+		var oBombbox2 = document.getElementById("bombbox2");
+		function bombbox2close(){
+			oBombbox2.style.display = "none";
+		};
+	</script>
+	<script>
+		/*点击关闭汇款专用账户框*/
+		var oBombbox3 = document.getElementById("bombbox3");
+		function bombbox3close(){
+			oBombbox3.style.display = "none";
+		};
+	</script>
+
+	<!-- scrolltop -->
+	<script>	
+	var oBombbox1 = document.getElementById("bombbox1");
+	var oBombbox2 = document.getElementById("bombbox2");
+		var oFixedbtn = document.getElementById("fixed-btn");
+		var oFooter2 = document.getElementById("footer2");
+		var oBombbox2 = document.getElementById("bombbox2");
+		window.onscroll=function(){
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;/*获取scrolltop值*/
+			/*document.title=scrollTop*//*显示当前scrolltop值*/
+			if(scrollTop>=700){
+				oFixedbtn.style.display = "block";
+				oFooter2.style.display = "block";
+
+			}
+			else if(scrollTop<700){
+				oFixedbtn.style.display = "none";
+				oFooter2.style.display = "none";
+
+				oBombbox1.style.display = "none";
+				oBombbox2.style.display = "none";
+				oBombbox3.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>
